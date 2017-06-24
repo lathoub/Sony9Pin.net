@@ -1,0 +1,3476 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Acme.Sony9Pin</name>
+    </assembly>
+    <members>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.Bogus">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.Bogus.#ctor">
+            <summary>
+                Whatever, should provoke a NAK
+            /// </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.PresetSelectControl.TimeCodePreset">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.PresetSelectControl.TimeCodePreset.#ctor(Acme.Sony9Pin.TimeCode)">
+            <summary>
+                Sets the Time Code Generator value to the time code indicated by DATA-1 thru DATA-4. The Data format is as per the
+                24.31 Cue Up With Data Cmd1, with two additional bits to indicate Color Frame and Drop Frame mode as follows:
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.PresetSelectControl.Timer1Reset">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.PresetSelectControl.Timer1Reset.#ctor">
+            <summary>
+                Sets the Timer-1 value to the time code indicated by DATA-1 thru DATA-4. For the time format see the 24.31 Cue Up
+                With Data command.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.PresetSelectControl.OutPlusShift">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.PresetSelectControl.OutPlusShift.#ctor">
+            <summary>
+                Increments the Video out point by one frame.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.PresetSelectControl.OutMinusShift">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.PresetSelectControl.OutMinusShift.#ctor">
+            <summary>
+                Decrements the Video out point by one frame.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.PresetSelectControl.OutFlagReset">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.PresetSelectControl.OutFlagReset.#ctor">
+            <summary>
+                Sets the Video out point to the value displayed on the _slave. This is the value of the selected tape timer.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.PresetSelectControl.OutEntry">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.PresetSelectControl.OutEntry.#ctor">
+            <summary>
+                Sets the Video out point to the value displayed on the _slave. This is the value of the selected tape timer.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.PresetSelectControl.InPlusShift">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.PresetSelectControl.InPlusShift.#ctor">
+            <summary>
+                Increments the Video in point by one frame.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.PresetSelectControl.InMinusShift">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.PresetSelectControl.InMinusShift.#ctor">
+            <summary>
+                Decrements the Video in point by one frame.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.PresetSelectControl.InFlagReset">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.PresetSelectControl.InFlagReset.#ctor">
+            <summary>
+                Sets the Video in point to the value displayed on the _slave. This is the value of the selected tape timer.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.PresetSelectControl.InEntry">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.PresetSelectControl.InEntry.#ctor">
+            <summary>
+                Sets the Video in point to the value displayed on the _slave. This is the value of the selected tape timer.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.PresetSelectControl.PresetSelectControl">
+            <summary>
+                The preset select control.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.PresetSelectControl.PresetSelectControl.TimeCodePreset">
+            <summary>
+                The timer 1 reset.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.PresetSelectControl.PresetSelectControl.Timer1Reset">
+            <summary>
+                The timer 1 reset.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.PresetSelectControl.PresetSelectControl.InEntry">
+            <summary>
+                The in entry.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.PresetSelectControl.PresetSelectControl.OutEntry">
+            <summary>
+                The out entry.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.PresetSelectControl.PresetSelectControl.AudioInEntry">
+            <summary>
+                The audio in entry.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.PresetSelectControl.PresetSelectControl.AudioOutEntry">
+            <summary>
+                The audio out entry.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.PresetSelectControl.PresetSelectControl.InDataPreset">
+            <summary>
+                The in data preset.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.PresetSelectControl.PresetSelectControl.OutDataPreset">
+            <summary>
+                The out data preset.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.PresetSelectControl.PresetSelectControl.InPlusShift">
+            <summary>
+                The in plus shift.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.PresetSelectControl.PresetSelectControl.InMinusShift">
+            <summary>
+                The in minus shift.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.PresetSelectControl.PresetSelectControl.OutPlusShift">
+            <summary>
+                The out plus shift.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.PresetSelectControl.PresetSelectControl.OutMinusShift">
+            <summary>
+                The out minus shift.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.PresetSelectControl.PresetSelectControl.InFlagReset">
+            <summary>
+                The in flag reset.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.PresetSelectControl.PresetSelectControl.OutFlagReset">
+            <summary>
+                The out flag reset.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.PresetSelectControl.PresetSelectControl.AutoModeOff">
+            <summary>
+                The auto mode off.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.PresetSelectControl.PresetSelectControl.AutoModeOn">
+            <summary>
+                The auto mode on.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.CommandBlockEventArgs">
+            <summary>
+                The device type event args.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.CommandBlockEventArgs.CommandBlock">
+            <summary>
+                The device name.
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.CommandBlockEventArgs.#ctor(Acme.Sony9Pin.CommandBlocks.CommandBlock)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Acme.Sony9Pin.CommandBlocks.CommandBlockEventArgs"/> class.
+            </summary>
+            <param name="commandBlock">
+            The device name.
+            </param>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.SenseRequest.TcGenSense">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.SenseRequest.TcGenSense.#ctor(Acme.Sony9Pin.CommandBlocks.TimeSenseRequest.TimeSenseRequest)">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.SenseRequest.StatusSense">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.SenseRequest.StatusSense.#ctor(System.Int32)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.SenseRequest.StatusSense.#ctor(System.Int32,System.Int32)">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.SenseRequest.CurrentTimeSense">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.SenseRequest.CurrentTimeSense.#ctor(Acme.Sony9Pin.CommandBlocks.TimeSenseRequest.TimeSenseRequest)">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.SenseRequest.SenseRequest">
+            <summary>
+                The sense request.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.SenseRequest.SenseRequest.TcGenSense">
+            <summary>
+                The tc gen sense.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.SenseRequest.SenseRequest.CurrentTimeSense">
+            <summary>
+                The current time sense.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.SenseRequest.SenseRequest.StatusSense">
+            <summary>
+                The status sense.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.TransportControl.AudioInDataPreset">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.TransportControl.AudioInDataPreset.#ctor(Acme.Sony9Pin.TimeCode)">
+            <summary>
+                Set the Audio In Point to the value indicated by DATA-1 thru DATA-4. The time format is as per the 24.31 Cue Up
+                With Data command.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.TransportControl.AntiClogTimerEnable">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.TransportControl.AntiClogTimerEnable.#ctor">
+            <summary>
+                Enables anti-clog timer.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.TransportControl.AutoEdit">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.TransportControl.AutoEdit.#ctor">
+            <summary>
+                When one of these commands is received the _slave goes into the indicated mode
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.TransportControl.AntiClogTimerDisable">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.TransportControl.AntiClogTimerDisable.#ctor">
+            <summary>
+                Disables the anti-clog timer. This timer is responsible for unthreading the tape upon timeout to save wear on the
+                heads. If a system disables this timer, it should take responsibility for head wear avoidance itself.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.TransportControl.AudioInEntry">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.TransportControl.AudioInEntry.#ctor">
+            <summary>
+                Sets the audio in point to the value displayed on the _slave. This is the value of the selected tape timer.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.TransportControl.AutoModeOff">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.TransportControl.AutoModeOff.#ctor">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.TransportControl.AutoModeOn">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.TransportControl.AutoModeOn.#ctor">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.TransportControl.AudioOutEntry">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.TransportControl.AudioOutEntry.#ctor">
+            <summary>
+                Sets the audio out point to the value displayed on the _slave. This is the value of the selected tape timer.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.TransportControl.AudioOutDataPreset">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.TransportControl.AudioOutDataPreset.#ctor(Acme.Sony9Pin.TimeCode)">
+            <summary>
+                Set the Audio Out Point to the value indicated by DATA-1 thru DATA-4. The time format is as per the 24.31 Cue Up
+                With Data command.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.TransportControl.ShuttleRev">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.TransportControl.ShuttleRev.#ctor(System.Byte)">
+            <summary>
+                When receiving one of the above commands, the _slave will start running in accordance with the speed Data defined
+                by DATA-1 and DATA-2. For the maximum and minimum speed see the 2X.12 Shuttle Fwd Cmd1.
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.TransportControl.ShuttleRev.#ctor(System.Byte,System.Byte)">
+            <summary>
+                When receiving one of the above commands, the _slave will start running in accordance with the speed Data defined
+                by DATA-1 and DATA-2. For the maximum and minimum speed see the 2X.12 Shuttle Fwd Cmd1.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.TransportControl.ShuttleFwd">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.TransportControl.ShuttleFwd.#ctor(System.Byte)">
+            <summary>
+                When these commands are received the _slave device will move forward with the speed indicated by DATA-1 and DATA-2.
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.TransportControl.ShuttleFwd.#ctor(System.Byte,System.Byte)">
+            <summary>
+                When these commands are received the _slave device will move forward with the speed indicated by DATA-1 and DATA-2.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.TransportControl.InDataPreset">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.TransportControl.InDataPreset.#ctor(Acme.Sony9Pin.TimeCode)">
+            <summary>
+                Set the Video In Point to the value indicated by DATA-1 thru DATA-4. The time format is as per the 24.31 Cue Up
+                With Data command.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.TransportControl.OutDataPreset">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.TransportControl.OutDataPreset.#ctor(Acme.Sony9Pin.TimeCode)">
+            <summary>
+                Set the Video Out Point to the value indicated by DATA-1 thru DATA-4. The time format is as per the 24.31 Cue Up
+                With Data command.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.TransportControl.CueUpWithData">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.TransportControl.CueUpWithData.#ctor(Acme.Sony9Pin.TimeCode)">
+            <summary>
+                Cues the _slave to the indicated time.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.TransportControl.VarRev">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.TransportControl.VarRev.#ctor">
+            <summary>
+                When receiving one of the above commands, the _slave will start running in accordance with the speed Data defined
+                by DATA-1 and DATA-2. For the maximum and minimum speed see the 2X.12 Shuttle Fwd command.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.TransportControl.VarFwd">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.TransportControl.VarFwd.#ctor">
+            <summary>
+                When these commands are received the _slave device will move forward with the speed indicated by DATA-1 and DATA-2.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.TransportControl.SyncPlay">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.TransportControl.SyncPlay.#ctor">
+            <summary>
+                Prerolls the _slave for the preset Preroll time, then enters Play mode.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.TransportControl.Stop">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.TransportControl.Stop.#ctor">
+            <summary>
+                This command places the Video disk recorder in the Stop mode, and any “motion”
+                command such as Play, fast forward, Record, etc., will Stop. This command will immediately
+                abort any current auto Play or Record process, but will not reset the auto mode
+                presets and Preview presets.
+                When a Stop command is issued, the Stop status (status byte 1, bit 5) will be set high,
+                and the Rewind status (status byte 1, bit 3), fast forward status (status byte 1, bit 2), Record
+                status (status byte 1, bit 1), Play status (status byte 1, bit 0), Shuttle status (status
+                byte 2, bit 5), Jog status (status byte 2, bit 4), and variable Play status (status byte 2, bit 3)
+                will all be set low.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.TransportControl.StandbyOn">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.TransportControl.StandbyOn.#ctor">
+            <summary>
+                Turns on Standby mode. For VTR, this causes the machine to stay threaded when in Stop. Affects EE/Tape selection.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.TransportControl.StandbyOff">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.TransportControl.StandbyOff.#ctor">
+            <summary>
+                Turns off Standby mode. For VTR, this causes the machine to unthread in Stop. Affects EE/Tape selection. Available
+                only in Stop mode.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.TransportControl.Rewind">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.TransportControl.Rewind.#ctor">
+            <summary>
+                When it receives this command, the _slave runs in reverse at maximum speed: on the DVR2000, this is 50xplay speed.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.TransportControl.Review">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.TransportControl.Review.#ctor">
+            <summary>
+                When one of these commands is received the _slave goes into the indicated mode
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.TransportControl.Record">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.TransportControl.Record.#ctor">
+            <summary>
+                This command places the Video disk recorder in the Record mode, and recording will
+                begin. Recording begins from the current time code position on the currently loaded Id,
+                and the time code position will increase and new Video material will be recorded until
+                recording is stopped.
+                If auto mode is enabled, the Record command will initiate the auto Record processing
+                described under the auto mode on command (40.41).
+                There should be a fixed latency in number of frames from the time this command is
+                issued, after a Record cue is issued, until the Video disk recorder actually starts recording,
+                so that the controlling device can frame accurately synchronize the source material.
+                When a Record command is issued, the Stop status (status byte 1, bit 5) will be set
+                low, and the Record status (status byte 1, bit 1), Play status (status byte 1, bit 0) and
+                servo lock status (status byte 2, bit 7) will be set high.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.TransportControl.ProgSpeedPlayPlus">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.TransportControl.ProgSpeedPlayPlus.#ctor">
+            <summary>
+                This command Play back the _slave device in steps of 0.1% within the range of +/- 25.5% of Play speed. DATA-1
+                contains an 8-bit speed value. The deviation from nominal Play speed is: Deviation(%)=0.1 x speed value
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.TransportControl.ProgSpeedPlayMin">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.TransportControl.ProgSpeedPlayMin.#ctor">
+            <summary>
+                This command Play back the _slave device in steps of 0.1% within the range of +/- 25.5% of Play speed. DATA-1
+                contains an 8-bit speed value. The deviation from nominal Play speed is: Deviation(%)=0.1 x speed value
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.TransportControl.Preview">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.TransportControl.Preview.#ctor">
+            <summary>
+                When one of these commands is received the _slave goes into the indicated mode
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.TransportControl.Preroll">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.TransportControl.Preroll.#ctor">
+            <summary>
+                When this command is received the _slave will search to the Preroll position defined as the value obtained by
+                subtracting the Preroll time set by the 44.31 Preroll Time Preset command from the IN POINT Data stored in the IN
+                ENTRY memory by the 40.10 In Entry command.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.TransportControl.Play">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.TransportControl.Play.#ctor">
+            <summary>
+                This command places the Video disk recorder in the Play mode, and playback will
+                begin. Playback begins from the current time code position on the currently loaded Id,
+                and the time code position will increase and new Video material will be output until
+                playback is stopped.
+                If auto mode is enabled, the Play command will initiate the auto Play processing described
+                under the auto mode on command (40.41).
+                There should be a fixed latency in number of frames from the time this command is
+                issued, after a Play cue or in preset is issued, until the Video disk recorder actually starts
+                playback, so that the controlling device can frame accurately synchronize the source
+                material.
+                When a Play command is issued, the Stop status (status byte 1, bit 5) will be set low,
+                and the Play status (status byte 1, bit 0) and servo lock status (status byte 2, bit 7) will be
+                set high.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.TransportControl.OutpointPreview">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.TransportControl.OutpointPreview.#ctor">
+            <summary>
+                Sends transport to preset out point if Insert mode is preset.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.TransportControl.JogRev">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.TransportControl.JogRev.#ctor">
+            <summary>
+                When receiving one of the above commands, the _slave will start running in accordance with the speed Data defined
+                by DATA-1 and DATA-2. For the maximum and minimum speed see the 2X.12 Shuttle Fwd command.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.TransportControl.JogFwd">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.TransportControl.JogFwd.#ctor(System.Byte)">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.TransportControl.JogFwd.#ctor(System.Byte,System.Byte)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.TransportControl.EditOn">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.TransportControl.EditOn.#ctor">
+            <summary>
+                This command is used to actually initiate recording. When the device is playing, and the Edit presets set by the 4X
+                30 Edit Preset command are in place, the preset channels will enter Record a fixed delay after this command is
+                received. The _slave will enter Edit Rec mode at this point. It takes the _slave 5 frames to enter Edit Rec after
+                receiving this command.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.TransportControl.FreezeOff">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.TransportControl.FreezeOff.#ctor">
+            <summary>
+                This command un-freezes the output of the device.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.TransportControl.FreezeOn">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.TransportControl.FreezeOn.#ctor">
+            <summary>
+                This command freezes the output of the device. There is usually a 2-5 frame delay associcated with the actual
+                freeze.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.TransportControl.EditOff">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.TransportControl.EditOff.#ctor">
+            <summary>
+                This command will Stop recording without affecting the state of motion of the device. Any channels in Record will
+                come out in response to this command, after 5 frames of delay. This command also clears the Manual Edit Record mode
+                and the Select EE mode.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.TransportControl.FastFwd">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.TransportControl.FastFwd.#ctor">
+            <summary>
+                When this command is received, the _slave device will run in fast forward mode. The speed depends on the VTR; for
+                the DVR2000 series it is 50 x Play speed.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.TransportControl.FullEEOff">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.TransportControl.FullEEOff.#ctor">
+            <summary>
+                Clears all channels from EE mode regardless of EDIT PRESET channels assigned by the 41.30 EDIT PRESET command. It
+                takes the _slave 5 frames to perform this operation after it receieves the command.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.TransportControl.FullEEOn">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.TransportControl.FullEEOn.#ctor">
+            <summary>
+                Sets all channels to EE mode regardless of EDIT PRESET channels assigned by the 41.30 EDIT PRESET command. It takes
+                the _slave 5 frames to perform this operation after it receieves the command.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.TransportControl.Eject">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.TransportControl.Eject.#ctor">
+            <summary>
+                When this command is received, the _slave will Eject the tape.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.TransportControl.SelectEEOn">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.TransportControl.SelectEEOn.#ctor">
+            <summary>
+                This command sets only the preset channels assigned by the 41.30 Edit Preset command to EE mode. The EE mode is
+                cleared by the 20.64 Edit Off command. It takes the _slave 5 frames to perform this operation after receiving the
+                command.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.TransportControl.TransportControl">
+            <summary>
+                The transport control.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.TransportControl.TransportControl.Stop">
+            <summary>
+                The stop.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.TransportControl.TransportControl.Play">
+            <summary>
+                The play.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.TransportControl.TransportControl.Record">
+            <summary>
+                The record.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.TransportControl.TransportControl.StandbyOff">
+            <summary>
+                The standby off.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.TransportControl.TransportControl.StandbyOn">
+            <summary>
+                The standby on.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.TransportControl.TransportControl.Eject">
+            <summary>
+                The eject.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.TransportControl.TransportControl.FastFwd">
+            <summary>
+                The fast fwd.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.TransportControl.TransportControl.JogFwd">
+            <summary>
+                The jog fwd.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.TransportControl.TransportControl.VarFwd">
+            <summary>
+                The var fwd.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.TransportControl.TransportControl.ShuttleFwd">
+            <summary>
+                The shuttle fwd.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.TransportControl.TransportControl.InDataPreset">
+            <summary>
+                The in data preset.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.TransportControl.TransportControl.OutDataPreset">
+            <summary>
+                The out data preset.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.TransportControl.TransportControl.AudioInDataPreset">
+            <summary>
+                The audio in data preset.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.TransportControl.TransportControl.AudioOutDataPreset">
+            <summary>
+                The audio out data preset.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.TransportControl.TransportControl.Rewind">
+            <summary>
+                The rewind.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.TransportControl.TransportControl.JogRev">
+            <summary>
+                The jog rev.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.TransportControl.TransportControl.VarRev">
+            <summary>
+                The var rev.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.TransportControl.TransportControl.ShuttleRev">
+            <summary>
+                The shuttle rev.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.TransportControl.TransportControl.Preroll">
+            <summary>
+                The preroll.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.TransportControl.TransportControl.CueUpWithData">
+            <summary>
+                The cue up with data.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.TransportControl.TransportControl.SyncPlay">
+            <summary>
+                The sync play.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.TransportControl.TransportControl.ProgSpeedPlayPlus">
+            <summary>
+                The prog speed play plus.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.TransportControl.TransportControl.ProgSpeedPlayMin">
+            <summary>
+                The prog speed play min.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.TransportControl.TransportControl.Preview">
+            <summary>
+                The preview.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.TransportControl.TransportControl.Review">
+            <summary>
+                The review.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.TransportControl.TransportControl.AutoEdit">
+            <summary>
+                The auto edit.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.TransportControl.TransportControl.OutpointPreview">
+            <summary>
+                The outpoint preview.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.TransportControl.TransportControl.AntiClogTimerDisable">
+            <summary>
+                The anti clog timer disable.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.TransportControl.TransportControl.AntiClogTimerEnable">
+            <summary>
+                The anti clog timer enable.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.TransportControl.TransportControl.FullEEOff">
+            <summary>
+                The full ee off.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.TransportControl.TransportControl.FullEEOn">
+            <summary>
+                The full ee on.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.TransportControl.TransportControl.SelectEEOn">
+            <summary>
+                The select ee on.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.TransportControl.TransportControl.EditOff">
+            <summary>
+                The edit off.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.TransportControl.TransportControl.EditOn">
+            <summary>
+                The edit on.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.TransportControl.TransportControl.FreezeOff">
+            <summary>
+                The freeze off.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.TransportControl.TransportControl.FreezeOn">
+            <summary>
+                The freeze on.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.Return.AckCommandBlock">
+            <summary>
+                The ack command block.
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.Return.AckCommandBlock.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:Acme.Sony9Pin.CommandBlocks.Return.AckCommandBlock" /> class.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.Return.Device">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.Return.Device.Names">
+            <summary>
+                The device names.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.Return.DeviceType">
+            <summary>
+                The device type.
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.Return.DeviceType.#ctor(System.Byte[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Acme.Sony9Pin.CommandBlocks.Return.DeviceType"/> class.
+            </summary>
+            <param name="deviceType">
+            The device type.
+            </param>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.Return.DeviceTypeEventArgs">
+            <summary>
+                The device type event args.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.Return.DeviceTypeEventArgs.DeviceName">
+            <summary>
+                The device name.
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.Return.DeviceTypeEventArgs.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Acme.Sony9Pin.CommandBlocks.Return.DeviceTypeEventArgs"/> class.
+            </summary>
+            <param name="deviceName">
+            The device name.
+            </param>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.Return.NakCommandBlock">
+            <summary>
+                The nak command block.
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.Return.NakCommandBlock.#ctor(Acme.Sony9Pin.CommandBlocks.Return.NakCommandBlock.Nak)">
+            <summary>
+                Initializes a new instance of the <see cref="T:Acme.Sony9Pin.CommandBlocks.Return.NakCommandBlock" /> class.
+            </summary>
+            <param name="error">
+                The error.
+            </param>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.Return.NakCommandBlock.Error">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.Return.NakCommandBlock.Nak">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.Return.NakCommandBlock.Nak.TimeOut">
+            <summary>
+            This bit is high when a communications time out error has occurred, otherwise it is low. 
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.Return.NakCommandBlock.Nak.FrameError">
+            This bit is high when a communications framing error has occurred, otherwise it is low. 
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.Return.NakCommandBlock.Nak.OverrunError">
+            .This bit is high when a communications overrun error has occurred, otherwise it is low. 
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.Return.NakCommandBlock.Nak.ParityError">
+            This bit is high when a communications parity error has occurred, otherwise it is low. 
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.Return.NakCommandBlock.Nak.ChecksumError">
+            This bit is high when a communications checksum error has occurred, otherwise it is low. 
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.Return.NakCommandBlock.Nak.UndefinedError">
+            This bit is high when an undefined command error has occurred, otherwise it is low.
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.Return.NakCommandBlock.IsChecksumError">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.Return.NakCommandBlock.IsFrameError">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.Return.NakCommandBlock.IsOverrunError">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.Return.NakCommandBlock.IsParityError">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.Return.NakCommandBlock.IsTimeOut">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.Return.NakCommandBlock.IsUndefinedError">
+            <summary>
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.Return.Return">
+            <summary>
+                The return.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.Return.Return.Ack">
+            <summary>
+                The ack.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.Return.Return.DeviceType">
+            <summary>
+                The device type.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.Return.Return.Nak">
+            <summary>
+                The nak.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.Cmd1">
+            <summary>
+                The command.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.Cmd1.SystemControl">
+            <summary>
+                The system control.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.Cmd1.Return">
+            <summary>
+                The return.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.Cmd1.TransportControl">
+            <summary>
+                The transport control.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.Cmd1.PresetSelectControl">
+            <summary>
+                The preset select control.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.Cmd1.SenseRequest">
+            <summary>
+                The sense request.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.Cmd1.SenseReturn">
+            <summary>
+                The sense return.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.Cmd1.rrrReturn">
+            <summary>
+                xxxRequest.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.Cmd1.xxxRequest">
+            <summary>
+                xxxRequest.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.Cmd1.TapeControl">
+            <summary>
+                TapeControl.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.Cmd1.zzzReturn">
+            <summary>
+                zzzReturn.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.CommandBlock">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.CommandBlock.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:Acme.Sony9Pin.CommandBlocks.CommandBlock" /> class.
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.CommandBlock.#ctor(System.Byte,System.Byte,System.Byte[])">
+            <summary>
+                Initializes a new instance of the <see cref="T:Acme.Sony9Pin.CommandBlocks.CommandBlock" /> class.
+            </summary>
+            <param name="cmd1DataCount">
+            </param>
+            <param name="cmd2">
+            </param>
+            <param name="data">
+            </param>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.CommandBlock.#ctor(Acme.Sony9Pin.CommandBlocks.Cmd1,System.Int32,System.Byte,System.Byte[])">
+            <summary>
+                Initializes a new instance of the <see cref="T:Acme.Sony9Pin.CommandBlocks.CommandBlock" /> class.
+            </summary>
+            <param name="cmd1">
+            </param>
+            <param name="dataCount">
+            </param>
+            <param name="cmd2">
+            </param>
+            <param name="data">
+            </param>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.CommandBlock.#ctor(System.Byte[])">
+            <summary>
+                Initializes a new instance of the <see cref="T:Acme.Sony9Pin.CommandBlocks.CommandBlock" /> class.
+            </summary>
+            <param name="buffer">
+                The buffer.
+            </param>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.CommandBlock.Cmd1">
+            <summary>
+                Gets or sets the Cmd1 (Leaving DataCount untouched)
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.CommandBlock.Cmd1DataCount">
+            <summary>
+                Gets or sets the cmd 1 data count.
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.CommandBlock.Cmd2">
+            <summary>
+                Gets or sets the cmd 2.
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.CommandBlock.Data">
+            <summary>
+                Gets or sets the data.
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.CommandBlock.DataCount">
+            <summary>
+                Gets or sets the DataCount (leaving Cmd1 untouched).
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.CommandBlock.GetCmd1(System.Byte)">
+            <summary>
+            </summary>
+            <param name="cmd1DataCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.CommandBlock.TryParse(System.Collections.Generic.List{System.Byte},Acme.Sony9Pin.CommandBlocks.CommandBlock@)">
+            <summary>
+            Converts the byte array representation of a commandblock. A return value indicates whether the conversion succeeded.
+            </summary>
+            <param name="s">A byte array containing a CommandBlock to convert.</param>
+            <param name="result">When this method returns, contains the CommandBlock value equivalent of 
+            the buffer contained in s, if the conversion succeeded, or zero if the conversion failed.
+             The conversion fails if the s parameter is null, is not of the correct format. This 
+            parameter is passed uninitialized.</param>
+            <returns>true if s was converted successfully; otherwise, false</returns>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.CommandBlock.GetDataCount(System.Byte)">
+            <summary>
+            </summary>
+            <param name="cmd1DataCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.CommandBlock.ToCmd1DataCount(Acme.Sony9Pin.CommandBlocks.Cmd1,System.Int32)">
+            <summary>
+            </summary>
+            <param name="cmd1"></param>
+            <param name="dataCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.CommandBlock.CompareTo(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.CommandBlock.Equals(Acme.Sony9Pin.CommandBlocks.CommandBlock)">
+            <summary>
+            
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.CommandBlock.ToBytes">
+            <summary>
+            </summary>
+            <returns>
+                The
+                <see>
+                    <cref>byte[]</cref>
+                </see>
+                .
+            </returns>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.CommandBlock.ToString">
+            <summary>
+                Assemble a friendly string
+            </summary>
+            <returns>
+                The <see cref="T:System.String" />.
+            </returns>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.CommandBlock.CheckSum">
+            <summary>
+                Calculate the checksum based on the current fields
+            </summary>
+            <returns>
+                The <see cref="T:System.Byte" />.
+            </returns>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.UserBitPreset">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.UserBitPreset.#ctor">
+            <summary>
+                This command presets the value given by DATA-1 through DATA-4 to the User Bits of the Time Code Generator.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.SystemControl.LocalEnable">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.SystemControl.LocalEnable.#ctor">
+            <summary>
+                Enable operation of _slave device from Local panel according to the
+                Local enable map set by the "4XB8" Local Key Map command
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.SystemControl.LocalDisable">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.SystemControl.LocalDisable.#ctor">
+            <summary>
+                Disable operation of the _slave device from its control panel
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.SystemControl.DeviceTypeRequest">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.SystemControl.DeviceTypeRequest.#ctor">
+            <summary>
+                This response is returned for a Device Type Request (00.11) command. Two bytes of
+                Data will be returned with this response. The first byte is generally used as a category of
+                device, and the second byte is generally used as a model number for the device. Although
+                not officially specified, some Video cassette recorder implementations use the
+                least significant bit of the category byte of the device type to indicate if the device is
+                configured for NTSC (bit low) or PAL (bit high). Video disk recorder manufacturers
+                must assign a unique number for their category and models, and should be careful to
+                avoid conflicting with existing device types.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.SystemControl.SystemControl">
+            <summary>
+                The system control.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.SystemControl.SystemControl.LocalDisable">
+            <summary>
+                The local disable.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.SystemControl.SystemControl.DeviceTypeRequest">
+            <summary>
+                The device type request.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.SystemControl.SystemControl.LocalEnable">
+            <summary>
+                The local enable.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.SenseReturn.SenseReturn">
+            <summary>
+                The sense return.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.SenseReturn.SenseReturn.Timer1Data">
+            <summary>
+                The timer 1 data.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.SenseReturn.SenseReturn.Timer2Data">
+            <summary>
+                The timer 2 data.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.SenseReturn.SenseReturn.LtcTimeData">
+            <summary>
+                The ltc time data.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.SenseReturn.SenseReturn.UserBitsLtcData">
+            <summary>
+                The user bits ltc data.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.SenseReturn.SenseReturn.VitcTimeData">
+            <summary>
+                The vitc time data.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.SenseReturn.SenseReturn.UserBitsVitcData">
+            <summary>
+                The user bits vitc data.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.SenseReturn.SenseReturn.GenTimeData">
+            <summary>
+                The gen time data.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.SenseReturn.SenseReturn.GenUserBitsData">
+            <summary>
+                The gen user bits data.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.SenseReturn.SenseReturn.InData">
+            <summary>
+                The in data.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.SenseReturn.SenseReturn.OutData">
+            <summary>
+                The out data.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.SenseReturn.SenseReturn.AudioInData">
+            <summary>
+                The audio in data.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.SenseReturn.SenseReturn.AudioOutData">
+            <summary>
+                The audio out data.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.SenseReturn.SenseReturn.CorrectedLtcTimeData">
+            <summary>
+                The corrected ltc time data.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.SenseReturn.SenseReturn.HoldUbLtcData">
+            <summary>
+                The hold ub ltc data.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.SenseReturn.SenseReturn.HoldVitcTimeData">
+            <summary>
+                The hold vitc time data.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.SenseReturn.SenseReturn.HoldUbVitcData">
+            <summary>
+                The hold ub vitc data.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.SenseReturn.SenseReturn.StatusData">
+            <summary>
+                The status data.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData">
+            <summary>
+                The status data.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.a1_">
+            <summary>
+                The a 1_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.a2_">
+            <summary>
+                The a 2_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.a3_">
+            <summary>
+                The a 3_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.a4_">
+            <summary>
+                The a 4_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.aIn_">
+            <summary>
+                The a in_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.aOut_">
+            <summary>
+                The a out_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.assemble_">
+            <summary>
+                The assemble_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.audSplit_">
+            <summary>
+                The aud split_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.autoEdit_">
+            <summary>
+                The auto edit_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.autoMode_">
+            <summary>
+                The auto mode_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.busy_">
+            <summary>
+                The busy_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.buzzer_">
+            <summary>
+                The buzzer_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.cfLock_">
+            <summary>
+                The cf lock_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.cfMode_">
+            <summary>
+                The cf mode_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.cueUp_">
+            <summary>
+                The cue up_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.edit_">
+            <summary>
+                The edit_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.eject_">
+            <summary>
+                The eject_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.eot_">
+            <summary>
+                The eot_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.fastFwd_">
+            <summary>
+                The fast fwd_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.fncAbort_">
+            <summary>
+                The fnc abort_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.freezeOn_">
+            <summary>
+                The freeze on_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.fullEE_">
+            <summary>
+                The full e e_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.hardError_">
+            <summary>
+                The hard error_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.inOut_">
+            <summary>
+                The in out_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.in_">
+            <summary>
+                The in_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.insert_">
+            <summary>
+                The insert_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.jog_">
+            <summary>
+                The jog_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.lampFwd_">
+            <summary>
+                The lamp fwd_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.lampRev_">
+            <summary>
+                The lamp rev_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.lampStill_">
+            <summary>
+                The lamp still_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.local_">
+            <summary>
+                The local_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.lostLock_">
+            <summary>
+                The lost lock_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.nearEot_">
+            <summary>
+                The near eot_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.out_">
+            <summary>
+                The out_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.play_">
+            <summary>
+                The play_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.preroll_">
+            <summary>
+                The preroll_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.previewInPreset_">
+            <summary>
+                The preview in preset_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.previewOutPreset_">
+            <summary>
+                The preview out preset_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.preview_">
+            <summary>
+                The preview_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.recInhib_">
+            <summary>
+                The rec inhib_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.record_">
+            <summary>
+                The record_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.review_">
+            <summary>
+                The review_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.rewind_">
+            <summary>
+                The rewind_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.selectEE_">
+            <summary>
+                The select e e_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.servoLock_">
+            <summary>
+                The servo lock_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.servoRefMissing_">
+            <summary>
+                The servo ref missing_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.shuttle_">
+            <summary>
+                The shuttle_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.spotErase_">
+            <summary>
+                The spot erase_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.srchLed1_">
+            <summary>
+                The srch led 1_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.srchLed2_">
+            <summary>
+                The srch led 2_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.srchLed4_">
+            <summary>
+                The srch led 4_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.srchLed8_">
+            <summary>
+                The srch led 8_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.standy_">
+            <summary>
+                The standy_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.still_">
+            <summary>
+                The still_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.stop_">
+            <summary>
+                The stop_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.svoAlarm_">
+            <summary>
+                The svo alarm_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.syncAct_">
+            <summary>
+                The sync act_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.sysAlarm_">
+            <summary>
+                The sys alarm_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.tapeDir_">
+            <summary>
+                The tape dir_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.tapeEnd_">
+            <summary>
+                The tape end_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.tapeOut_">
+            <summary>
+                The tape out_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.tapeTop_">
+            <summary>
+                The tape top_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.tensionRelease_">
+            <summary>
+                The tension release_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.tso_">
+            <summary>
+                The tso_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.var_">
+            <summary>
+                The var_.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.video_">
+            <summary>
+                The video_.
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.Data">
+            
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData" /> class.
+                Constructor
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.#ctor(System.Byte[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData"/> class.
+                Copy Constructor
+            </summary>
+            <param name="data">
+            The data.
+            </param>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.Assemble">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.AudSplit">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.AutoEdit">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.AutoMode">
+            <summary>
+                This bit is set high when auto mode is enable, low
+                when auto mode is disabled.
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.Busy">
+            <summary>
+                This bit is high if the Video disk recorder can not accept
+                motion commands or other commands requiring
+                time consuming processing, low if those commands
+                can be accepted. Note that status commands
+                and other sensing commands must always be processed,
+                even if this bit is set high.
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.Buzzer">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.CfLock">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.CueUp">
+            <summary>
+                This bit is set high at the completion of a Play/Record
+                cue command or Preset In command. It is set
+                low on initialization, and any time the current time
+                code position changes due to a motion command,
+                etc.
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.Edit">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.Eject">
+            <summary>
+                This bit is high while ejecting.
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.Eot">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.FastFwd">
+            <summary>
+                This bit is high when in fast forward mode, low for other modes.
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.FncAbort">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.FreezeOn">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.FullEE">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.HardError">
+            <summary>
+                This bit is high if a hardware error or other unrecoverable
+                error is encountered, low if no such error has occurred.
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.In">
+            <summary>
+                This bit is set high if the auto mode in preset references
+                a valid Id and contains a valid time code position.
+                Otherwise, it is set low.
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.InOut">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.Insert">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.Jog">
+            <summary>
+                This bit is high when in Jog mode, low for other modes.
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.LampFwd">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.LampRev">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.LampStill">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.Local">
+            <summary>
+                This bit is high if the Video disk recorder is under Local
+                control, low if remote control is enabled. Status
+                sense is always available to the controlling device,
+                even under Local control.
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.LostLock">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.NearEot">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.Out">
+            <summary>
+                This bit is set high if the auto mode out preset contains
+                a valid time code position. Otherwise, it is set
+                low.
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.Play">
+            <summary>
+                This bit is high when in Play or Record mode, low for other modes.
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.Preroll">
+            <summary>
+                This bit is set high while cueing (following the issuing
+                of a Record/Play cue command or Preset In
+                command), and is set low high at completion.
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.Preview">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.PreviewInPreset">
+            <summary>
+                This bit is set high if the auto mode Preview in preset
+                references a valid Id and contains a valid time code
+                position. Otherwise, it is set low. The auto mode
+                Preview presets will become invalid, and this bit will
+                be set low, when the auto mode Preview presets are
+                shifted to the auto mode presets as part of the auto
+                Play processing. This will be the means by which a
+                controlling device can determine when it can set new
+                values for the auto mode Preview presets.
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.PreviewOutPreset">
+            <summary>
+                This bit is set high if the auto mode Preview out preset
+                contains a valid time code position. Otherwise, it
+                is set low. The auto mode Preview presets will become
+                invalid, and this bit will be set low, when the
+                auto mode Preview presets are shifted to the auto
+                mode presets as part of the auto Play processing.
+                This will be the means by which a controlling device
+                can determine when it can set new values for the
+                auto mode Preview presets.
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.RecInhib">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.Record">
+            <summary>
+                This bit is high when in Record mode, low for other modes.
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.Review">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.Rewind">
+            <summary>
+                This bit is high when in Rewind mode, low for other modes.
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.SelectEE">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.ServoLock">
+            <summary>
+                This bit is high when a Play or Record mode is active,
+                low for other modes such as when the output is not
+                genlocked to the reference. While servo lock probably
+                has no meaning for a Video disk recorder, this
+                status bit is provided in order to maintain compatibility
+                with existing Video cassette recorder implementations.
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.ServoRefMissing">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.Shuttle">
+            <summary>
+                This bit is high when in Shuttle mode, low for other modes.
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.SpotErase">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.SrchLed1">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.SrchLed2">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.SrchLed4">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.SrchLed8">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.Standby">
+            <summary>
+                This bit is always high.
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.Still">
+            <summary>
+                This bit is high when time code is not changing
+                (stopped, Still, zero speed Shuttle, Jog, or variable
+                Play, etc.).
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.Stop">
+            <summary>
+                This bit is high when in Stop mode, low for other modes.
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.SvoAlarm">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.SyncAct">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.SysAlarm">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.TapeDir">
+            <summary>
+                This bit is low when time code is increasing
+                (“moving” forward), high when time code is decreasing
+                (“moving” in reverse).
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.TapeEnd">
+            <summary>
+                This bit is set high when the current time code position
+                has reached its maximum value and can not increase
+                (“move” forward). Once set, this bit will be
+                cleared (set low) by any movement command (Play,
+                Rewind, etc.), and will continue to be set low as long
+                as the current time code position can increase
+                (“move” forward). This bit is also used during recording
+                to indicate to the controlling device that
+                there is no more available storage in the Video disk
+                recorder.
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.TapeOut">
+            <summary>
+                This bit is always low.
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.TapeTop">
+            <summary>
+                This bit is set high when the current time code position
+                has reached its minimum value and can not decrease
+                (“move” in reverse). Once set, this bit will be
+                cleared (set low) by any movement command (Play,
+                Rewind, etc.), and will continue to be set low as long
+                as the current time code position can decrease
+                (“move” in reverse).
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.TensionRelease">
+            <summary>
+                This bit is always low.
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.Var">
+            <summary>
+                This bit is high when in variable Play  mode, low for other modes.
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.Video">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.a1">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.a2">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.a3">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.a4">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.aIn">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.aOut">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.cfMode">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.tso">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.GetData(System.Int32,System.Int32)">
+            <summary>
+            </summary>
+            <param name="start">
+            </param>
+            <param name="length">
+            </param>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.Equals(Acme.Sony9Pin.CommandBlocks.StatusData.StatusData)">
+            <summary>
+            
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.ToString">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.StatusData.StatusData.CompareTo(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.StatusData.StatusDataEventArgs">
+            <summary>
+                The status data event args.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.StatusData.StatusDataEventArgs.StatusData">
+            <summary>
+                The status data.
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.CommandBlocks.StatusData.StatusDataEventArgs.#ctor(Acme.Sony9Pin.CommandBlocks.StatusData.StatusData)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Acme.Sony9Pin.CommandBlocks.StatusData.StatusDataEventArgs"/> class.
+            </summary>
+            <param name="statusData">
+            The status data.
+            </param>
+        </member>
+        <member name="T:Acme.Sony9Pin.CommandBlocks.TimeSenseRequest.TimeSenseRequest">
+            <summary>
+                The time sense request.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.TimeSenseRequest.TimeSenseRequest.LtcTime">
+            <summary>
+                The ltc time.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.TimeSenseRequest.TimeSenseRequest.VitcTime">
+            <summary>
+                The vitc time.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.TimeSenseRequest.TimeSenseRequest.Timer1">
+            <summary>
+                The timer 1.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.TimeSenseRequest.TimeSenseRequest.Timer2">
+            <summary>
+                The timer 2.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.TimeSenseRequest.TimeSenseRequest.LtcUserBits">
+            <summary>
+                The ltc user bits.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CommandBlocks.TimeSenseRequest.TimeSenseRequest.VitcUserBits">
+            <summary>
+                The vitc user bits.
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.ConnectedEventArgs">
+            <summary>
+                The protocol error event args.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.ConnectedEventArgs.Connected">
+            <summary>
+                The index.
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.ConnectedEventArgs.#ctor(System.Boolean)">
+            <summary>
+                Initializes a new instance of the <see cref="T:Acme.Sony9Pin.ConnectedEventArgs" /> class.
+            </summary>
+            <param name="connected">
+                The memory.
+            </param>
+        </member>
+        <member name="T:Acme.Sony9Pin.ProtocolErrorEventArgs">
+            <summary>
+                The protocol error event args.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.ProtocolErrorEventArgs.Index">
+            <summary>
+                The index.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.ProtocolErrorEventArgs.Memory">
+            <summary>
+                The memory.
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.ProtocolErrorEventArgs.#ctor(System.Byte[],System.Int32)">
+            <summary>
+                Initializes a new instance of the <see cref="T:Acme.Sony9Pin.ProtocolErrorEventArgs" /> class.
+            </summary>
+            <param name="memory">
+                The memory.
+            </param>
+            <param name="index">
+                The index.
+            </param>
+        </member>
+        <member name="T:Acme.Sony9Pin.Sony9Pin">
+            <summary>
+                The sony 9 pin.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.Sony9Pin.TraceSwitch">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.Sony9Pin.Serial">
+            <summary>
+                The _serial.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.Sony9Pin.InputBuffer">
+            <summary>
+                The _input buffer.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.Sony9Pin._disposed">
+            <summary>
+                The _disposed.
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9Pin.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:Acme.Sony9Pin.Sony9Pin" /> class.
+                Constructor
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.Sony9Pin.PortName">
+            <summary>
+                Gets or sets the port name.
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9Pin.Close">
+            <summary>
+                Close the serial port
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9Pin.Dispose">
+            <summary>
+                The dispose.
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9Pin.Open(System.String)">
+            <summary>
+                Open the serial port
+            </summary>
+            <param name="portName">
+                The port Name.
+            </param>
+            <returns>
+                The <see cref="T:System.Boolean" />.
+            </returns>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9Pin.Send(System.Byte[])">
+            <summary>
+            </summary>
+            <param name="buffer">
+                The response.
+            </param>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9Pin.Send(Acme.Sony9Pin.CommandBlocks.CommandBlock)">
+            <summary>
+            </summary>
+            <param name="commandBlock">
+                The response.
+            </param>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9Pin.Dispose(System.Boolean)">
+            <summary>
+                Clean up any resources being used.
+            </summary>
+            <param name="disposing">
+                true if managed resources should be disposed; otherwise, false.
+            </param>
+        </member>
+        <member name="T:Acme.Sony9Pin.Sony9PinMaster">
+            <summary>
+                The sony 9 pin master.
+                The protocol is initiated by the master. The slave should return a response within 9 msec. The response may be:
+                NAK + Error Data: Undefined Cmd1 or communication error
+                COMMAND + Data: if Cmd1 requested data
+                ACK: if Cmd1 did not request data
+                The master should not send another Cmd1 until receiving a response from the slave device. The master must also
+                insure that no more than 10 msec lapses between bytes in a Cmd1 block. The master must immediatly stop sending
+                data when it receives a NAK + Error Data message. If the Error Data contains "Undefined Cmd1" the master may
+                immediatley send another Cmd1, otherwise it must wait at least 10 msec before sending another Cmd1. When
+                the master does not receive a response from the slave within the 10 msec timeout, it may assume that communications
+                have ceased and take appropriate measures.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.Sony9PinMaster._commandBlocks">
+            <summary>
+                The _command blocks.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.Sony9PinMaster._statusData">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.Sony9PinMaster.StatusData">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.Sony9PinMaster._timeCode">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinMaster.#ctor">
+            <summary>
+                Constructor
+                Initializes a new instance of the <see cref="T:Acme.Sony9Pin.Sony9PinMaster" /> class.
+            </summary>
+        </member>
+        <member name="E:Acme.Sony9Pin.Sony9PinMaster.Ack">
+            <summary>
+                The acknowledgement.
+            </summary>
+        </member>
+        <member name="E:Acme.Sony9Pin.Sony9PinMaster.ConnectedChanged">
+            <summary>
+                The connected.
+            </summary>
+        </member>
+        <member name="E:Acme.Sony9Pin.Sony9PinMaster.DeviceType">
+            <summary>
+                The device type changed.
+            </summary>
+        </member>
+        <member name="E:Acme.Sony9Pin.Sony9PinMaster.Nak">
+            <summary>
+                The not acknowledgement.
+            </summary>
+        </member>
+        <member name="E:Acme.Sony9Pin.Sony9PinMaster.StatusDataReceived">
+            <summary>
+                The status data.
+            </summary>
+        </member>
+        <member name="E:Acme.Sony9Pin.Sony9PinMaster.StatusDataChanged">
+            <summary>
+                The status data.
+            </summary>
+        </member>
+        <member name="E:Acme.Sony9Pin.Sony9PinMaster.StatusDataChanging">
+            <summary>
+                The status data.
+            </summary>
+        </member>
+        <member name="E:Acme.Sony9Pin.Sony9PinMaster.TimeDataReceived">
+            <summary>
+                The time data.
+            </summary>
+        </member>
+        <member name="E:Acme.Sony9Pin.Sony9PinMaster.TimeDataChanged">
+            <summary>
+                The time data.
+            </summary>
+        </member>
+        <member name="E:Acme.Sony9Pin.Sony9PinMaster.TimeDataChanging">
+            <summary>
+                The time data.
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.Sony9PinMaster.DeviceName">
+            <summary>
+                Gets the device name.
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.Sony9PinMaster.IsConnected">
+            <summary>
+                Gets or sets the port name.
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.Sony9PinMaster.ResponseTimeout">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinMaster.Close">
+            <summary>
+                Close the serial port
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinMaster.Command(Acme.Sony9Pin.CommandBlocks.CommandBlock)">
+            <summary>
+            </summary>
+            <param name="command">
+            </param>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinMaster.Command(Acme.Sony9Pin.CommandBlocks.Cmd1,System.Int32,System.Byte,System.Byte[])">
+            <summary>
+            </summary>
+            <param name="cmd1">
+            </param>
+            <param name="dataCount">
+            </param>
+            <param name="cmd2">
+            </param>
+            <param name="data">
+            </param>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinMaster.Command(Acme.Sony9Pin.CommandBlocks.Cmd1,System.Int32,System.Byte)">
+            <summary>
+            </summary>
+            <param name="cmd1">
+            </param>
+            <param name="dataCount">
+            </param>
+            <param name="cmd2">
+            </param>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinMaster.Command(System.Byte,System.Byte)">
+            <summary>
+            </summary>
+            <param name="cmd1DataCount">
+            </param>
+            <param name="cmd2">
+            </param>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinMaster.Command(System.Byte,System.Byte,System.Byte[])">
+            <summary>
+                The Master of the communication (a remote controller) requests
+                a Cmd1 to be executed
+            </summary>
+            <param name="cmd1DataCount">
+            </param>
+            <param name="cmd2">
+            </param>
+            <param name="data">
+            </param>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinMaster.Open(System.String)">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinMaster.ProcessResponse(Acme.Sony9Pin.CommandBlocks.CommandBlock)">
+            <summary>
+            </summary>
+            <param name="response">
+                The response.
+            </param>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinMaster.RaiseAckHandler">
+            <summary>
+                The raise ack handler.
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinMaster.RaiseConnectedChanged(System.Boolean)">
+            <summary>
+                The raise connected.
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinMaster.RaiseDeviceTypeHandler(System.String)">
+            <summary>
+                The raise device type handler.
+            </summary>
+            <param name="deviceName">
+                The sender.
+            </param>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinMaster.RaiseNakHandler(Acme.Sony9Pin.CommandBlocks.Return.NakCommandBlock.Nak)">
+            <summary>
+                The raise nak handler.
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinMaster.RaiseStatusDataReceivedHandler(Acme.Sony9Pin.CommandBlocks.StatusData.StatusData)">
+            <summary>
+                The raise status data handler.
+            </summary>
+            <param name="statusData">
+                The sender.
+            </param>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinMaster.RaiseStatusDataChangedHandler(Acme.Sony9Pin.CommandBlocks.StatusData.StatusData)">
+            <summary>
+                The raise status data handler.
+            </summary>
+            <param name="statusData">
+                The sender.
+            </param>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinMaster.RaiseStatusDataChangingHandler(Acme.Sony9Pin.CommandBlocks.StatusData.StatusData)">
+            <summary>
+                The raise status data handler.
+            </summary>
+            <param name="statusData">
+                The sender.
+            </param>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinMaster.RaiseTimeDataReceivedHandler(Acme.Sony9Pin.CommandBlocks.SenseReturn.SenseReturn,Acme.Sony9Pin.TimeCode)">
+            <summary>
+                The raise time data handler.
+            </summary>
+            <param name="senseReturn">
+                The sender.
+            </param>
+            <param name="timeCode">
+                The sender.
+            </param>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinMaster.RaiseTimeDataChangedHandler(Acme.Sony9Pin.CommandBlocks.SenseReturn.SenseReturn,Acme.Sony9Pin.TimeCode)">
+            <summary>
+                The raise time data handler.
+            </summary>
+            <param name="senseReturn">
+                The sender.
+            </param>
+            <param name="timeCode">
+                The sender.
+            </param>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinMaster.RaiseTimeDataChangingHandler(Acme.Sony9Pin.CommandBlocks.SenseReturn.SenseReturn,Acme.Sony9Pin.TimeCode)">
+            <summary>
+                The raise time data handler.
+            </summary>
+            <param name="senseReturn">
+                The sender.
+            </param>
+            <param name="timeCode">
+                The sender.
+            </param>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinMaster.QueueReader(System.Object,System.ComponentModel.DoWorkEventArgs)">
+            <summary>
+                Queue reader thread
+            </summary>
+            <param name="sender">
+                The sender.
+            </param>
+            <param name="e">
+                The ea.
+            </param>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinMaster.OnQueueReaderCompleted(System.Object,System.ComponentModel.RunWorkerCompletedEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Acme.Sony9Pin.Sony9PinSlave">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.Sony9PinSlave.DeviceType">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinSlave.#ctor">
+            <summary>
+            </summary>
+            <summary>
+            </summary>
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinSlave.#ctor(System.Byte[])">
+            <summary>
+            </summary>
+        </member>
+        <member name="E:Acme.Sony9Pin.Sony9PinSlave.CueUpWithData">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Acme.Sony9Pin.Sony9PinSlave.InDataPreset">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Acme.Sony9Pin.Sony9PinSlave.OutDataPreset">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Acme.Sony9Pin.Sony9PinSlave.Eject">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Acme.Sony9Pin.Sony9PinSlave.FastFwd">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Acme.Sony9Pin.Sony9PinSlave.JogFwd">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Acme.Sony9Pin.Sony9PinSlave.JogRev">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Acme.Sony9Pin.Sony9PinSlave.LocalDisable">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Acme.Sony9Pin.Sony9PinSlave.LocalEnable">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Acme.Sony9Pin.Sony9PinSlave.Play">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Acme.Sony9Pin.Sony9PinSlave.Preroll">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Acme.Sony9Pin.Sony9PinSlave.Record">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Acme.Sony9Pin.Sony9PinSlave.Rewind">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Acme.Sony9Pin.Sony9PinSlave.ShuttleFwd">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Acme.Sony9Pin.Sony9PinSlave.ShuttleRev">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Acme.Sony9Pin.Sony9PinSlave.StandbyOff">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Acme.Sony9Pin.Sony9PinSlave.StandbyOn">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Acme.Sony9Pin.Sony9PinSlave.Stop">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Acme.Sony9Pin.Sony9PinSlave.VarFwd">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="E:Acme.Sony9Pin.Sony9PinSlave.VarRev">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinSlave.Close">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinSlave.Open(System.String)">
+            <summary>
+                Open the serial port
+            </summary>
+            <param name="portName">
+                The port Name.
+            </param>
+            <returns>
+                The <see cref="T:System.Boolean" />.
+            </returns>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinSlave.CurrentTimeSense(Acme.Sony9Pin.CommandBlocks.TimeSenseRequest.TimeSenseRequest)">
+            <summary>
+                SenseRequest
+            </summary>
+            <param name="timeSenseRequest">
+                The time sense request.
+            </param>
+            <returns>
+                The <see cref="T:Acme.Sony9Pin.CommandBlocks.CommandBlock" />.
+            </returns>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinSlave.DeviceTypeRequest">
+            <summary>
+                The device type request.
+            </summary>
+            <returns>
+                The <see cref="T:Acme.Sony9Pin.CommandBlocks.CommandBlock" />.
+            </returns>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinSlave.ProcessRequest(Acme.Sony9Pin.CommandBlocks.CommandBlock)">
+            <summary>
+            </summary>
+            <param name="request">
+                The request.
+            </param>
+            <returns>
+                The <see cref="T:Acme.Sony9Pin.CommandBlocks.CommandBlock" />.
+            </returns>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinSlave.RaiseCueUpWithData(System.Byte[])">
+            <summary>
+                The cue up with data.
+            </summary>
+            <param name="data">
+                data.
+            </param>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinSlave.RaiseInDataPreset(System.Byte[])">
+            <summary>
+                The cue up with data.
+            </summary>
+            <param name="data">
+                data.
+            </param>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinSlave.RaiseOutDataPreset(System.Byte[])">
+            <summary>
+                The cue up with data.
+            </summary>
+            <param name="data">
+                data.
+            </param>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinSlave.RaiseEject">
+            <summary>
+                The eject.
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinSlave.RaiseFastFwd">
+            <summary>
+                The fast fwd.
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinSlave.RaiseJogFwd">
+            <summary>
+                The jog fwd.
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinSlave.RaiseJogRev">
+            <summary>
+                The jog rev.
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinSlave.RaiseLocalDisable">
+            <summary>
+                The local disable.
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinSlave.RaiseLocalEnable">
+            <summary>
+                The local enable.
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinSlave.RaisePlay">
+            <summary>
+                The play.
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinSlave.RaisePreroll">
+            <summary>
+                The preroll.
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinSlave.RaiseRecord">
+            <summary>
+                The record.
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinSlave.RaiseRewind">
+            <summary>
+                The rewind.
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinSlave.RaiseShuttleFwd">
+            <summary>
+                The shuttle fwd.
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinSlave.RaiseShuttleRev">
+            <summary>
+                The shuttle rev.
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinSlave.RaiseStandbyOff">
+            <summary>
+                The standby off.
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinSlave.RaiseStandbyOn">
+            <summary>
+                The standby on.
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinSlave.RaiseStop">
+            <summary>
+                The stop.
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinSlave.RaiseVarFwd">
+            <summary>
+                The var fwd.
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinSlave.RaiseVarRev">
+            <summary>
+                The var rev.
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinSlave.StatusSense(System.Int32,System.Int32)">
+            <summary>
+                SenseRequest.
+            </summary>
+            <param name="start">
+                The start.
+            </param>
+            <param name="length">
+                The length.
+            </param>
+            <returns>
+                The <see cref="T:Acme.Sony9Pin.CommandBlocks.CommandBlock" />.
+            </returns>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinSlave.TcGenSense(Acme.Sony9Pin.CommandBlocks.TimeSenseRequest.TimeSenseRequest)">
+            <summary>
+                SenseRequest
+            </summary>
+            <param name="timeSenseRequest">
+                The time sense request.
+            </param>
+            <returns>
+                The <see cref="T:Acme.Sony9Pin.CommandBlocks.CommandBlock" />.
+            </returns>
+        </member>
+        <member name="F:Acme.Sony9Pin.Sony9PinSlave.DiscoveryWaitHandle">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinSlave.Discover">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Acme.Sony9Pin.Sony9PinSlave.OnDataReceived(System.Object,System.IO.Ports.SerialDataReceivedEventArgs)">
+            <summary>
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Acme.Sony9Pin.CgTimeRepresentation">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CgTimeRepresentation.TimeCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CgTimeRepresentation.Frames">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.CgTimeRepresentation.Fields">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.TimeCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.TimeCode.TicksPerHour">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.TimeCode.TicksPerMinute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.TimeCode.TicksPerSecond">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.TimeCode.FieldsPerFrame">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.TimeCode.MinutesPerHour">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.TimeCode.SecondsPerMinute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.TimeCode._drilldownTotalTicks">
+            <summary>
+                Internal data members
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.TimeCode._totalTicks">
+            <summary>
+                The one and only ticks storage data member
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.#ctor(System.Int64)">
+            <summary>
+                Constructor from ticks
+            </summary>
+            <param name="ticks"></param>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.#ctor(Acme.Sony9Pin.TimeCode)">
+            <summary>
+                Constructor from TimeCode
+            </summary>
+            <param name="timecode"></param>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.#ctor(System.DateTime)">
+            <summary>
+                Constructor from TimeCode
+            </summary>
+            <param name="dateTime"></param>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.#ctor(System.TimeSpan)">
+            <summary>
+                Constructor from a TimeSpan
+            </summary>
+            <param name="ts"></param>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.#ctor(System.Double)">
+            <summary>
+                Constructor from a total number of seconds
+            </summary>
+            <param name="totalSeconds"></param>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+                Constructor from hours, minutes, seconds, frames
+            </summary>
+            <param name="hours"></param>
+            <param name="minutes"></param>
+            <param name="seconds"></param>
+            <param name="frames"></param>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+                Constructor from hours, minutes, seconds, frames, ticks
+            </summary>
+            <param name="hours"></param>
+            <param name="minutes"></param>
+            <param name="seconds"></param>
+            <param name="frames"></param>
+            <param name="ticks"></param>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.#ctor(System.Byte[])">
+             <summary>
+             Constructor from sony9pin protocol bytes
+             
+                  data-1     data-2      data-3     data-4
+                | Frame | | Seconds | | minutes | | hours |
+                | 10  1 | |   10 1  | |   10 1  | | 10 1  |
+             
+             auth - this is how time is represented in all 
+             commands and responses using a time code. The 
+             numbers indicate that the 10s value is stored 
+             in the high nibble and the 1s value in the low 
+             nibble. This is not to be confused with the 
+             80-bit SMPTE timecode which is present in the 
+             analog timecode track on tape, or with the 
+             VITC timecode. 
+            
+             </summary>
+             <param name="tc"></param>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.#ctor(System.String)">
+            <summary>
+                Constructor from a hh:mm:ss:ff formatted string
+            </summary>
+            <param name="tc"></param>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.#ctor">
+            <summary>
+                Default Constructor
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.TimeCode.FieldsPerSecond">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.TimeCode.FramesPerSecond">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.TimeCode.MaxValue">
+            <summary>
+                Get the highest possible timecode
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.TimeCode.MinValue">
+            <summary>
+                Get the lowest possible timecode
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.TimeCode.Now">
+            <summary>
+                Get the 'now' absolute system time, in TimeCode form
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.TimeCode.TicksPerField">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.TimeCode.TicksPerFrame">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.TimeCode.Fields">
+            <summary>
+                Get the Fields component
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.TimeCode.Frames">
+            <summary>
+                Get the frames component
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.TimeCode.Hours">
+            <summary>
+                Get the hours component
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.TimeCode.Minutes">
+            <summary>
+                Get the minutes component
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.TimeCode.Seconds">
+            <summary>
+                Get the seconds component
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.TimeCode.Ticks">
+            <summary>
+                Get the ticks component
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.TimeCode.TimeSpan">
+            <summary>
+                Get/set the TimeCode as a TimeSpan
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.TimeCode.TotalFields">
+            <summary>
+                get/set the total number of Fields (where fps = DefaultFramesPerSecond)
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.TimeCode.TotalFrames">
+            <summary>
+                get/set the total number of frames (where fps = DefaultFramesPerSecond)
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.TimeCode.TotalHours">
+            <summary>
+                Get/set the total number of hours (where fps = DefaultFramesPerSecond)
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.TimeCode.TotalMinutes">
+            <summary>
+                Get/set the total number of minutes (where fps = DefaultFramesPerSecond)
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.TimeCode.TotalSeconds">
+            <summary>
+                Get/set the total number of seconds
+            </summary>
+        </member>
+        <member name="P:Acme.Sony9Pin.TimeCode.TotalTicks">
+            <summary>
+                get/set the total number of ticks (one tick = 100 nanoseconds)
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.FromBytes(System.Byte[])">
+            <summary>
+                Convert a byte array (in reversed order, as given by the BVW75 protocol) to a TimeCode
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.FromTicks(System.Int64)">
+            <summary>
+                Convert a timecode TotalTicks value
+                to a timecode object.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.FromTimeSpan(System.TimeSpan)">
+            <summary>
+                Convert a timespan to a timecode
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.Parse(System.String)">
+            <summary>
+                Parse a timecode string into a timecode.
+                Can throw an exception upon failure.
+            </summary>
+            <param name="timeCodeString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.SnapToField(System.Int64)">
+            <summary>
+            
+            </summary>
+            <param name="ticks"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.TryParse(System.String,Acme.Sony9Pin.TimeCode@)">
+            <summary>
+                Try to Parse a timecode string into a timecode.
+                returns true on success (giving 'result' the corresponding, valid timecode)
+                returns false on failure (giving 'result' a null value, because it is undefined)
+            </summary>
+            <param name="s"></param>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.op_Addition(Acme.Sony9Pin.TimeCode,Acme.Sony9Pin.TimeCode)">
+            <summary>
+            
+            </summary>
+            <param name="tc1"></param>
+            <param name="tc2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.op_GreaterThan(Acme.Sony9Pin.TimeCode,Acme.Sony9Pin.TimeCode)">
+            <summary>
+            
+            </summary>
+            <param name="tc1"></param>
+            <param name="tc2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.op_GreaterThanOrEqual(Acme.Sony9Pin.TimeCode,Acme.Sony9Pin.TimeCode)">
+            <summary>
+            
+            </summary>
+            <param name="tc1"></param>
+            <param name="tc2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.op_LessThan(Acme.Sony9Pin.TimeCode,Acme.Sony9Pin.TimeCode)">
+            <summary>
+            
+            </summary>
+            <param name="tc1"></param>
+            <param name="tc2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.op_LessThanOrEqual(Acme.Sony9Pin.TimeCode,Acme.Sony9Pin.TimeCode)">
+            <summary>
+            
+            </summary>
+            <param name="tc1"></param>
+            <param name="tc2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.op_Subtraction(Acme.Sony9Pin.TimeCode,Acme.Sony9Pin.TimeCode)">
+            <summary>
+            
+            </summary>
+            <param name="tc1"></param>
+            <param name="tc2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.AddFields(System.Int64)">
+            <summary>
+                Increase the TimeCode by a number of frames
+            </summary>
+            <param name="fields"></param>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.AddFrames(System.Int64)">
+            <summary>
+                Increase the TimeCode by a number of frames
+            </summary>
+            <param name="frames"></param>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.AddHours(System.Int64)">
+            <summary>
+                Increase the TimeCode by a number of hours
+            </summary>
+            <param name="hours"></param>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.AddMinutes(System.Int64)">
+            <summary>
+                Increase the TimeCode by a number of minutes
+            </summary>
+            <param name="minutes"></param>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.AddSeconds(System.Single)">
+            <summary>
+                Increase the TimeCode by a number of seconds
+            </summary>
+            <param name="seconds"></param>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.AddTicks(System.Int64)">
+            <summary>
+                Increase the TimeCode by a number of ticks
+            </summary>
+            <param name="ticks"></param>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.CompareTo(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.Equals(Acme.Sony9Pin.TimeCode)">
+            <summary>
+            
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.GetData(System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
+            <summary>
+                fetch the data, in an atomic thread-safe way
+            </summary>
+            <param name="hours"></param>
+            <param name="minutes"></param>
+            <param name="seconds"></param>
+            <param name="fields"></param>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.GetData(System.Int32@,System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
+            <summary>
+                fetch the data, in an atomic thread-safe way
+            </summary>
+            <param name="hours"></param>
+            <param name="minutes"></param>
+            <param name="seconds"></param>
+            <param name="fields"></param>
+            <param name="ticks"></param>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.SetData(System.Byte[])">
+             <summary>
+             Set the data from a byte array, in an atomic thread-safe way
+             
+                  data-1     data-2      data-3     data-4
+                | Frame | | Seconds | | minutes | | hours |
+                | 10  1 | |   10 1  | |   10 1  | | 10 1  |
+             
+             auth - this is how time is represented in all 
+             commands and responses using a time code. The 
+             numbers indicate that the 10s value is stored 
+             in the high nibble and the 1s value in the low 
+             nibble. This is not to be confused with the 
+             80-bit SMPTE timecode which is present in the 
+             analog timecode track on tape, or with the 
+             VITC timecode. 
+            
+             </summary>
+             <param name="tc"></param>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.SetData(Acme.Sony9Pin.TimeCode)">
+            <summary>
+                Set the data from the other timecode
+            </summary>
+            <param name="tc"></param>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.SetData(System.String)">
+            <summary>
+                Set the data from a string
+                format: [-]hh:mm:ss:ff or [-]hh:mm:ss:mil (note: ',' instead of ':' is also allowed, as well as mixing ',' and ':')
+            </summary>
+            <param name="timeCodeString"></param>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.SetData(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+                Set the data from separate values: hours, minutes, seconds, frames
+            </summary>
+            <param name="hours"></param>
+            <param name="minutes"></param>
+            <param name="seconds"></param>
+            <param name="fields"></param>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.SetData(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+                Set the data from separate values: hours, minutes, seconds, frames, ticks
+            </summary>
+            <param name="hours"></param>
+            <param name="minutes"></param>
+            <param name="seconds"></param>
+            <param name="fields"></param>
+            <param name="ticks"></param>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.SetData(System.TimeSpan)">
+            <summary>
+                Set the data from a timespan
+            </summary>
+            <param name="timespan"></param>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.SubtractFields(System.Int64)">
+            <summary>
+                Decrease the TimeCode by a number of frames
+            </summary>
+            <param name="fields"></param>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.SubtractFrames(System.Int64)">
+            <summary>
+                Decrease the TimeCode by a number of frames
+            </summary>
+            <param name="frames"></param>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.SubtractHours(System.Int64)">
+            <summary>
+                Decrease the TimeCode by a number of hours
+            </summary>
+            <param name="hours"></param>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.SubtractMinutes(System.Int64)">
+            <summary>
+                Decrease the TimeCode by a number of minutes
+            </summary>
+            <param name="minutes"></param>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.SubtractSeconds(System.Single)">
+            <summary>
+                Decrease the TimeCode by a number of seconds
+            </summary>
+            <param name="seconds"></param>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.SubtractTicks(System.Int64)">
+            <summary>
+                Decrease the TimeCode by a number of ticks
+            </summary>
+            <param name="ticks"></param>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.ToBinaryCodedDecimal">
+            <summary>
+                Convert a TimeCode to a sequence of bytes (in reverse order, as expected by the BVW75 protocol)
+                in an atomic thread-safe way
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.ToString">
+            <summary>
+                Convert a TimeCode to a string of format hh:mm:ss:ff, in an atomic thread-safe way
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.ToString(Acme.Sony9Pin.CgTimeRepresentation)">
+            <summary>
+            </summary>
+            <param name="representation"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCode.DrillDown">
+            <summary>
+                Drill down the hours, minutes, seconds and fields from the _totalTicks
+            </summary>
+        </member>
+        <member name="T:Acme.Sony9Pin.TimeCodeEventArgs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.TimeCodeEventArgs.TimeCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeCodeEventArgs.#ctor(Acme.Sony9Pin.TimeCode)">
+            <summary>
+            Initializes a new instance of the class.
+            </summary>
+            <param name="timeCode">
+            The memory.
+            </param>
+        </member>
+        <member name="T:Acme.Sony9Pin.TimeDataEventArgs">
+            <summary>
+                The time data event args.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.TimeDataEventArgs.SenseReturn">
+            <summary>
+                The sense return.
+            </summary>
+        </member>
+        <member name="F:Acme.Sony9Pin.TimeDataEventArgs.TimeCode">
+            <summary>
+                The time code.
+            </summary>
+        </member>
+        <member name="M:Acme.Sony9Pin.TimeDataEventArgs.#ctor(Acme.Sony9Pin.CommandBlocks.SenseReturn.SenseReturn,Acme.Sony9Pin.TimeCode)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Acme.Sony9Pin.TimeDataEventArgs"/> class.
+            </summary>
+            <param name="senseReturn">
+            The sense return.
+            </param>
+            <param name="timeCode">
+            The time code.
+            </param>
+        </member>
+    </members>
+</doc>

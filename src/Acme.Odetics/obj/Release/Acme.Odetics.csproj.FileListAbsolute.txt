@@ -1,0 +1,5 @@
+C:\Users\MABARU\Documents\Acme.Odetics\bin\Release\Acme.Odetics.dll
+C:\Users\MABARU\Documents\Acme.Odetics\bin\Release\Acme.Odetics.pdb
+C:\Users\MABARU\Documents\Acme.Odetics\Acme.Odetics\obj\Release\Acme.Odetics.csprojResolveAssemblyReference.cache
+C:\Users\MABARU\Documents\Acme.Odetics\Acme.Odetics\obj\Release\Acme.Odetics.dll
+C:\Users\MABARU\Documents\Acme.Odetics\Acme.Odetics\obj\Release\Acme.Odetics.pdb

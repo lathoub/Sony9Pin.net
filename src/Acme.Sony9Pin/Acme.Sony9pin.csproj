@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AE0231A3-124F-46A8-BDD7-182DF85C564D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Acme.Sony9Pin</RootNamespace>
+    <AssemblyName>Acme.Sony9Pin</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>bin\Release\Acme.Sony9Pin.xml</DocumentationFile>
+
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <PackageId>Sony9Pin.lathoub</PackageId>
+    <PackageVersion>0.8.0</PackageVersion>
+    <Authors>lathoub</Authors>
+    <Description>Sony9Pin protocol in C#, both Master and Slave</Description>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageReleaseNotes>First draft release</PackageReleaseNotes>
+    <Copyright>no copyright</Copyright>
+    <PackageTags>Sony9Pin 9Pin</PackageTags>
+
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommandBlocks\Bogus.cs" />
+    <Compile Include="CommandBlocks\PresetSelectControl\TimeCodePreset.cs" />
+    <Compile Include="CommandBlocks\CommandBlockEventArgs.cs" />
+    <Compile Include="CommandBlocks\SenseRequest\TCGenSense.cs" />
+    <Compile Include="CommandBlocks\SenseRequest\StatusSense.cs" />
+    <Compile Include="CommandBlocks\SenseRequest\CurrentTimeSense.cs" />
+    <Compile Include="CommandBlocks\TransportControl\AudioInDataPreset.cs" />
+    <Compile Include="CommandBlocks\Return\AckCommandBlock.cs" />
+    <Compile Include="CommandBlocks\TransportControl\AntiClogTimerEnable.cs" />
+    <Compile Include="CommandBlocks\TransportControl\AutoEdit.cs" />
+    <Compile Include="CommandBlocks\Cmd1.cs" />
+    <Compile Include="CommandBlocks\CommandBlock.cs" />
+    <Compile Include="CommandBlocks\TransportControl\AntiClogTimerDisable.cs" />
+    <Compile Include="CommandBlocks\TransportControl\AudioInEntry.cs" />
+    <Compile Include="CommandBlocks\TransportControl\AutoModeOff.cs" />
+    <Compile Include="CommandBlocks\TransportControl\AutoModeOn.cs" />
+    <Compile Include="CommandBlocks\TransportControl\AudioOutEntry.cs" />
+    <Compile Include="CommandBlocks\TransportControl\AudioOutDataPreset.cs" />
+    <Compile Include="CommandBlocks\TransportControl\ShuttleRev.cs" />
+    <Compile Include="CommandBlocks\TransportControl\ShuttleFwd.cs" />
+    <Compile Include="CommandBlocks\TransportControl\InDataPreset.cs" />
+    <Compile Include="CommandBlocks\TransportControl\OutDataPreset.cs" />
+    <Compile Include="CommandBlocks\TransportControl\CueUpWithData.cs" />
+    <Compile Include="CommandBlocks\TransportControl\VarRev.cs" />
+    <Compile Include="CommandBlocks\TransportControl\VarFwd.cs" />
+    <Compile Include="CommandBlocks\UserBitPreset.cs" />
+    <Compile Include="CommandBlocks\PresetSelectControl\Timer1Reset.cs" />
+    <Compile Include="CommandBlocks\TransportControl\SyncPlay.cs" />
+    <Compile Include="CommandBlocks\TransportControl\Stop.cs" />
+    <Compile Include="CommandBlocks\TransportControl\StandbyOn.cs" />
+    <Compile Include="CommandBlocks\TransportControl\StandbyOff.cs" />
+    <Compile Include="CommandBlocks\TransportControl\Rewind.cs" />
+    <Compile Include="CommandBlocks\TransportControl\Review.cs" />
+    <Compile Include="CommandBlocks\TransportControl\Record.cs" />
+    <Compile Include="CommandBlocks\TransportControl\ProgSpeedPlayPlus.cs" />
+    <Compile Include="CommandBlocks\TransportControl\ProgSpeedPlayMin.cs" />
+    <Compile Include="CommandBlocks\TransportControl\Preview.cs" />
+    <Compile Include="CommandBlocks\TransportControl\Preroll.cs" />
+    <Compile Include="CommandBlocks\TransportControl\Play.cs" />
+    <Compile Include="CommandBlocks\TransportControl\OutpointPreview.cs" />
+    <Compile Include="CommandBlocks\PresetSelectControl\OutPlusShift.cs" />
+    <Compile Include="CommandBlocks\PresetSelectControl\OutMinusShift.cs" />
+    <Compile Include="CommandBlocks\PresetSelectControl\OutFlagReset.cs" />
+    <Compile Include="CommandBlocks\PresetSelectControl\OutEntry.cs" />
+    <Compile Include="CommandBlocks\SystemControl\LocalEnable.cs" />
+    <Compile Include="CommandBlocks\SystemControl\LocalDisable.cs" />
+    <Compile Include="CommandBlocks\TransportControl\JogRev.cs" />
+    <Compile Include="CommandBlocks\TransportControl\JogFwd.cs" />
+    <Compile Include="CommandBlocks\PresetSelectControl\InPlusShift.cs" />
+    <Compile Include="CommandBlocks\PresetSelectControl\InMinusShift.cs" />
+    <Compile Include="CommandBlocks\PresetSelectControl\InFlagReset.cs" />
+    <Compile Include="CommandBlocks\PresetSelectControl\InEntry.cs" />
+    <Compile Include="CommandBlocks\SystemControl\DeviceTypeRequest.cs" />
+    <Compile Include="CommandBlocks\TransportControl\EditOn.cs" />
+    <Compile Include="CommandBlocks\TransportControl\FreezeOff.cs" />
+    <Compile Include="CommandBlocks\TransportControl\FreezeOn.cs" />
+    <Compile Include="CommandBlocks\TransportControl\EditOff.cs" />
+    <Compile Include="CommandBlocks\TransportControl\FastFwd.cs" />
+    <Compile Include="CommandBlocks\TransportControl\FullEEOff.cs" />
+    <Compile Include="CommandBlocks\TransportControl\FullEEOn.cs" />
+    <Compile Include="CommandBlocks\Return\DeviceNames.cs" />
+    <Compile Include="CommandBlocks\Return\DeviceType.cs" />
+    <Compile Include="CommandBlocks\Return\DeviceTypeEventArgs.cs" />
+    <Compile Include="CommandBlocks\TransportControl\Eject.cs" />
+    <Compile Include="CommandBlocks\Return\NakCommandBlock.cs" />
+    <Compile Include="CommandBlocks\PresetSelectControl\PresetSelectControl.cs" />
+    <Compile Include="ConnectedEventArgs.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProtocolErrorEventArgs.cs" />
+    <Compile Include="CommandBlocks\TransportControl\SelectEEOn.cs" />
+    <Compile Include="CommandBlocks\Return\Return.cs" />
+    <Compile Include="CommandBlocks\SenseRequest\SenseRequest.cs" />
+    <Compile Include="CommandBlocks\SenseReturn\SenseReturn.cs" />
+    <Compile Include="Sony9Pin.cs" />
+    <Compile Include="Sony9PinMaster.cs" />
+    <Compile Include="Sony9PinSlave.cs" />
+    <Compile Include="CommandBlocks\StatusData\StatusData.cs" />
+    <Compile Include="CommandBlocks\StatusData\StatusDataEventArgs.cs" />
+    <Compile Include="CommandBlocks\SystemControl\SystemControl.cs" />
+    <Compile Include="TimeCode.cs" />
+    <Compile Include="TimeCodeEventArgs.cs" />
+    <Compile Include="TimeDataEventArgs.cs" />
+    <Compile Include="CommandBlocks\TimeSenseRequest\TimeSenseRequest.cs" />
+    <Compile Include="CommandBlocks\TransportControl\TransportControl.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
