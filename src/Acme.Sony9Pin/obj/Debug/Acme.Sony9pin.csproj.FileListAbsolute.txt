@@ -1,9 +1,0 @@
-C:\Users\MABARU\Documents\Acme.Odetics\Acme.Sony9Pin\bin\Debug\Acme.Sony9Pin.dll
-C:\Users\MABARU\Documents\Acme.Odetics\Acme.Sony9Pin\bin\Debug\Acme.Sony9Pin.pdb
-C:\Users\MABARU\Documents\Acme.Odetics\Acme.Sony9Pin\obj\Debug\Acme.Sony9pin.csprojResolveAssemblyReference.cache
-C:\Users\MABARU\Documents\Acme.Odetics\Acme.Sony9Pin\obj\Debug\Acme.Sony9Pin.dll
-C:\Users\MABARU\Documents\Acme.Odetics\Acme.Sony9Pin\obj\Debug\Acme.Sony9Pin.pdb
-C:\Users\MABARU\Documents\Acme.Odetics\src\Acme.Sony9Pin\bin\Debug\Acme.Sony9Pin.dll
-C:\Users\MABARU\Documents\Acme.Odetics\src\Acme.Sony9Pin\bin\Debug\Acme.Sony9Pin.pdb
-C:\Users\MABARU\Documents\Acme.Odetics\src\Acme.Sony9Pin\obj\Debug\Acme.Sony9Pin.dll
-C:\Users\MABARU\Documents\Acme.Odetics\src\Acme.Sony9Pin\obj\Debug\Acme.Sony9Pin.pdb
