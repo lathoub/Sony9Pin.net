@@ -21,13 +21,11 @@ master.Close();
 ```
 master.TimeDataChanged += OnTimeDataChanged;
 master.StatusDataChanged += OnStatusDataChanged;
-//...
 
 private void OnMasterTimeDataChanged(object sender, TimeDataEventArgs e)
 {
    Console.WriteLine(e.TimeCode.Hours);
 }
-//...
 
 private void OnMasterStatusDataChanged(object sender, StatusDataEventArgs e)
 {
