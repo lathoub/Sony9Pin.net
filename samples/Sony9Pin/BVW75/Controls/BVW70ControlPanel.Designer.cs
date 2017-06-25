@@ -540,7 +540,7 @@
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(195, 15);
             this.label13.TabIndex = 67;
-            this.label13.Text = "Cue-Graphics 9Pin Protocol Panel";
+            this.label13.Text = "Acme 9Pin Protocol Panel";
             // 
             // txtDeviceName
             // 
