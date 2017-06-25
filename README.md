@@ -14,7 +14,7 @@ The Odetics extension to Sony9Pin protocolis also included.  It is a superset po
 
 ## C# Usage
 ### Master
-This implementation of the Sony9PinMaster automatically requests TimeCode and StatusData is the command queue is empty, the user does not need to program this her/himself. Commands issued using the Command method will be put on top of the queue. 
+This implementation of the Sony9PinMaster automatically requests TimeCode and StatusData when the command queue is empty, the user does not need to program this her/himself. Commands issued using the Command method will be put on top of the queue. 
 
 (sample below taken from the BVW75 code in the samples folder)
 (RS-422 is in DTE mode)
