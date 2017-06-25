@@ -7,8 +7,14 @@ A .Net (C#) library to control a video recorder using the Sony 9-Pin protocol. T
 * Odetics Slave (requires additional programming)
 ## Configuration
 ## Hardware
-| Tables        | Are           | Cool  |
+| Pin        | Master           | Slave  |
 | ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| 1 | Frame ground | Frame ground |
+| 2 | Receive A      |   Transmit A |
+| 3 | Transmit B      |    Receive B |
+| 4 | Transmit common | Receive common |
+| 5 | Spare or ground      |   Spare or ground |
+| 6 | Receive common      |    Transmit common |
+| 7 | Receive B | Transmit B |
+| 8 | Transmit A      |   Receive A |
+| 9 | Frame ground      |    Frame ground |
