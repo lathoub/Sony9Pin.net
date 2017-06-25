@@ -16,7 +16,7 @@ The Odetics extension to Sony9Pin protocolis also included.  It is a superset po
 This implementation of the Sony9PinMaster automatically requests TimeCode and StatusData is the command queue is empty, the user does not need to program this her/himself. Commands issued using the Command method will be put on top of the queue. 
 
 (sample below taken from the BVW75 code in the samples folder)
-
+(RS-422 is in DTE mode)
 ```
 Sony9PinMaster master = new Sony9PinMaster();
 master.Open("COM3");
@@ -40,6 +40,13 @@ private void OnStatusDataChanged(object sender, StatusDataEventArgs e)
    Console.WriteLine(e.StatusData.Play); 
 }
 ```
+
+### Slave
+When in Slave mode, the library must react to the command given by the Master. The reactions to the commands will have to be programmed.
+(RS-422 is in DCE mode)
+
+Inherit from Sony9PinSlave and implement the missing members.
+
 ## Visual Studio Community 2017
 ![alt text](https://user-images.githubusercontent.com/4082369/27515695-c8b4d6ce-59a9-11e7-8c2b-0de8209e46eb.PNG "Sony9Pin.Net in Visual Studio 2017")
 
