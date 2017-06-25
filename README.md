@@ -8,8 +8,7 @@ The Odetics extension of the Sony9Pin protocol is also included in this repo.  I
 
 ## Features
 * Sony9Pin Master
-* Sony9Pin Slave (requires additional programming)
-* Odetics Master
+* Sony9Pin Slave (requires additional programming)* Odetics Master
 * Odetics Slave (requires additional programming)
 
 ## C# Usage
@@ -19,7 +18,7 @@ This implementation of the Sony9PinMaster automatically requests TimeCode and St
 (sample below taken from the BVW75 code in the samples folder)
 (RS-422 is in DTE mode)
 ```
-Sony9PinMaster master = new Sony9PinMaster();
+ Sony9PinMaster master = new Sony9PinMaster();
 master.Open("COM3");
 master.Command(new StandbyOn());
 master.Command(new Play());
@@ -29,7 +28,7 @@ master.Close();
 #### Listening to events
 ```
 master.TimeDataChanged += OnTimeDataChanged;
-master.StatusDataChanged += OnStatusDataChanged;
+-master.StatusDataChanged += OnStatusDataChanged;
 
 private void OnTimeDataChanged(object sender, TimeDataEventArgs e)
 {
@@ -64,12 +63,12 @@ The controlling device and the controlled device communicate through the interch
 
 ### CMD-1 
 Indicates the function and direction of the command, according to: 
-0: System control (Master->Slave) 
-1: Return for 0,2, or 4 of cmd-1 (Slave->Master) 
-2: Transport Control (Master->Slave) 
-4: Preset/Select control (Master->Slave) 
-6: Sense Request (Master->Slave) 
-7: Sense Return (Slave->Master) 
+* 0: System control (Master->Slave) 
+* 1: Return for 0,2, or 4 of cmd-1 (Slave->Master) 
+* 2: Transport Control (Master->Slave) 
+* 4: Preset/Select control (Master->Slave) 
+* 6: Sense Request (Master->Slave) 
+* 7: Sense Return (Slave->Master) 
 ### DATA COUNT 
 Indicates the number of bytes ( max 15 ) inserted between CMD-2 and CHECKSUM 
 ### CMD-2 
