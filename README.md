@@ -5,7 +5,14 @@ A .Net (C#) library to control a video recorder using the Sony 9-Pin protocol. T
 * Sony9Pin Slave (requires additional programming)
 * Odetics Master
 * Odetics Slave (requires additional programming)
-## Configuration
+## Communication Protocol
+The protocol is initiated by the master. The slave should return a response within 9 msec. The response may be: 
+* NAK + Error Data: Undefined command or communication error 
+* COMMAND + Data: if Command requested data 
+* ACK: if Command did not request data
+
+The master should not send another command until receiving a response from the slave device. The master must also insure that no more than 10 msec lapses between bytes in a command block. The master must immediatly stop sending data when it receives a NAK + Error Data message. If the Error Data contains "Undefined Command" the master may immediatley send another command, otherwise it must wait at least 10 msec before sending another command. When the master does not receive a response from the slave within the 10 msec timeout, it may assume that communications have ceased and take appropriate measures. 
+
 ## Cabling
 | Pin                 | Master           | Slave  |
 | ------------------- |:----------------:|:-----:|
