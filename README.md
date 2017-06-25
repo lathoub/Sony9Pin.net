@@ -9,7 +9,8 @@ The Odetics extension of the Sony9Pin protocol is also included in this repo.  I
 
 ## Features
 * Sony9Pin Master
-* Sony9Pin Slave (requires additional programming)* Odetics Master
+* Sony9Pin Slave (requires additional programming)
+* Odetics Master
 * Odetics Slave (requires additional programming)
 
 ## C# Usage
