@@ -4,6 +4,7 @@ A .Net (C#) library to control a video recorder using the Sony 9-Pin protocol. T
 Developed using Visual Studio Community 2017, Version 15.2 (26430.14) release. .Net Framework 4.6.1
 
 
+
 The Odetics extension of the Sony9Pin protocol is also included in this repo.  It is a superset of the popular Sony 9-Pin VTR control protocol. Most of the added functionnalities are about “Clip” management by which the user can enqueue “Load Clip”/“Load Next Clip” commands.
 
 ## Features
@@ -12,6 +13,7 @@ The Odetics extension of the Sony9Pin protocol is also included in this repo.  I
 * Odetics Slave (requires additional programming)
 
 ## C# Usage
+
 ### Master
 This implementation of the Sony9PinMaster automatically requests TimeCode and StatusData when the command queue is empty, the user does not need to program this her/himself. Commands issued using the Command method will be put on top of the queue. 
 
@@ -46,6 +48,8 @@ When in Slave mode, the library must react to the command given by the Master. T
 (RS-422 is in DCE mode)
 
 Inherit from Sony9PinSlave and implement the missing members.
+
+Note: The Slave implementation is not as mature as the Master implementation.
 
 ## Visual Studio Community 2017
 ![alt text](https://user-images.githubusercontent.com/4082369/27515695-c8b4d6ce-59a9-11e7-8c2b-0de8209e46eb.PNG "Sony9Pin.Net in Visual Studio 2017")
