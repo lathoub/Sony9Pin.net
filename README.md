@@ -8,11 +8,11 @@ A .Net (C#) library to control a video recorder using the Sony 9-Pin protocol. T
 
 ## C# Usage
 ### Master
-
 Sony9PinMaster master = new Sony9PinMaster();
 master.Open("COM3");
 master.Command(new StandbyOn());
 master.Command(new Play());
+//...
 
 #### Listening to events
 master.TimeDataChanged += OnTimeDataChanged;
