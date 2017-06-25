@@ -10,6 +10,8 @@ A .Net (C#) library to control a video recorder using the Sony 9-Pin protocol. T
 ### Master
 This implementation of the Sony9PinMaster automatically requests TimeCode and StatusData is the command queue is empty, the user does not need to program this her/himself. Commands issued using the Command method will be put on top of the queue. 
 
+(sample below taken from the BVW75 code in the samples folder)
+
 ```Sony9PinMaster master = new Sony9PinMaster();
 master.Open("COM3");
 master.Command(new StandbyOn());
@@ -22,12 +24,12 @@ master.Close();
 master.TimeDataChanged += OnTimeDataChanged;
 master.StatusDataChanged += OnStatusDataChanged;
 
-private void OnMasterTimeDataChanged(object sender, TimeDataEventArgs e)
+private void OnTimeDataChanged(object sender, TimeDataEventArgs e)
 {
    Console.WriteLine(e.TimeCode.Hours);
 }
 
-private void OnMasterStatusDataChanged(object sender, StatusDataEventArgs e)
+private void OnStatusDataChanged(object sender, StatusDataEventArgs e)
 {
    Console.WriteLine(e.StatusData.Play); 
 }
