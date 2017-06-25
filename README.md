@@ -8,26 +8,29 @@ A .Net (C#) library to control a video recorder using the Sony 9-Pin protocol. T
 
 ## C# Usage
 ### Master
-Sony9PinMaster master = new Sony9PinMaster();
+```Sony9PinMaster master = new Sony9PinMaster();
 master.Open("COM3");
 master.Command(new StandbyOn());
 master.Command(new Play());
 //...
-
+```
 #### Listening to events
+```
 master.TimeDataChanged += OnTimeDataChanged;
 master.StatusDataChanged += OnStatusDataChanged;
+//...
 
 private void OnMasterTimeDataChanged(object sender, TimeDataEventArgs e)
 {
    Console.WriteLine(e.TimeCode.Hours);
 }
+//...
 
 private void OnMasterStatusDataChanged(object sender, StatusDataEventArgs e)
 {
    Console.WriteLine(e.StatusData.Play); 
 }
-
+```
 ## Communication Format
 The protocol is based on the EIA RS-422-A signal standard, usually at 38.4 kBit/s. The data are sent as 1 start bit + 8 data bits + 1 parity bit + 1 stop bit. Parity is odd: the bitwise sum of data bits 0 -7 and the parity bit is an odd number.
 ## Command Block Format
