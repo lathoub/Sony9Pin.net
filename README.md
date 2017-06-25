@@ -50,6 +50,27 @@ When in Slave mode, the library must react to the command given by the Master. T
 
 Inherit from Sony9PinSlave and implement the missing members.
 
+```csharp
+public class BVW75 : Sony9PinSlave
+    {
+        protected override CommandBlock CurrentTimeSense(TimeSenseRequest timeSenseRequest)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override CommandBlock StatusSense(int start, int length)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override CommandBlock TcGenSense(TimeSenseRequest timeSenseRequest)
+        {
+            throw new NotImplementedException();
+        }
+
+    }
+```
+
 Note: The Slave implementation is not as mature as the Master implementation.
 
 ## Visual Studio Community 2017
