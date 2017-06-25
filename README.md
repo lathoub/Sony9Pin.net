@@ -3,6 +3,7 @@ A .Net (C#) library to control a video recorder using the Sony 9-Pin protocol. T
 
 Developed using Visual Studio Community 2017, Version 15.2 (26430.14) release. .Net Framework 4.6.1
 
+
 The Odetics extension to Sony9Pin protocolis also included.  It is a superset popular Sony 9-Pin VTR control protocol. Most of the added functionnalities are about “Clip” management by which the user can enqueue “Load Clip”/“Load Next Clip” commands.
 
 ## Features
@@ -49,6 +50,8 @@ Inherit from Sony9PinSlave and implement the missing members.
 
 ## Visual Studio Community 2017
 ![alt text](https://user-images.githubusercontent.com/4082369/27515695-c8b4d6ce-59a9-11e7-8c2b-0de8209e46eb.PNG "Sony9Pin.Net in Visual Studio 2017")
+
+The dropbox just below the On/Off switch lists the serial devices that are linked to Sony9Pin slaves (if this list is empty, no devices are connected). When a COMx is visible, you can switch on the device by clicking in the checkBox.
 
 ## Communication Format
 The protocol is based on the EIA RS-422-A signal standard, usually at 38.4 kBit/s. The data are sent as 1 start bit + 8 data bits + 1 parity bit + 1 stop bit. Parity is odd: the bitwise sum of data bits 0 -7 and the parity bit is an odd number.
