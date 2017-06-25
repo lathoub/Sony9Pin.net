@@ -7,12 +7,15 @@ A .Net (C#) library to control a video recorder using the Sony 9-Pin protocol. T
 * Odetics Slave (requires additional programming)
 
 ## C# Usage
+This implementation of the Sony9PinMaster automatically requests TimeCode and StatusData is the command queue is empty, the user does not need to program this her/himself. Commands issued using the Command method will be put on top of the queue. 
+
 ### Master
 ```Sony9PinMaster master = new Sony9PinMaster();
 master.Open("COM3");
 master.Command(new StandbyOn());
 master.Command(new Play());
 //...
+master.Close();
 ```
 #### Listening to events
 ```
