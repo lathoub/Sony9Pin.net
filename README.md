@@ -53,4 +53,4 @@ The master should not send another command until receiving a response from the s
 
 ## Hardware
 ### RS-422 Adapters
-http://softio.com/pcie_pci_express_2014
+http://softio.com/pcie_pci_express_2014 Model # LF774KB 
