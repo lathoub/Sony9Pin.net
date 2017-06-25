@@ -19,7 +19,7 @@ This implementation of the Sony9PinMaster automatically requests TimeCode and St
 
 (sample below taken from the BVW75 code in the samples folder)
 (RS-422 is in DTE mode)
-```
+```csharp
  Sony9PinMaster master = new Sony9PinMaster();
 master.Open("COM3");
 master.Command(new StandbyOn());
@@ -28,9 +28,9 @@ master.Command(new Play());
 master.Close();
 ```
 #### Listening to events
-```
+```csharp
 master.TimeDataChanged += OnTimeDataChanged;
--master.StatusDataChanged += OnStatusDataChanged;
+master.StatusDataChanged += OnStatusDataChanged;
 
 private void OnTimeDataChanged(object sender, TimeDataEventArgs e)
 {
