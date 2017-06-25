@@ -17,7 +17,8 @@ This implementation of the Sony9PinMaster automatically requests TimeCode and St
 
 (sample below taken from the BVW75 code in the samples folder)
 
-```Sony9PinMaster master = new Sony9PinMaster();
+```
+Sony9PinMaster master = new Sony9PinMaster();
 master.Open("COM3");
 master.Command(new StandbyOn());
 master.Command(new Play());
@@ -39,6 +40,7 @@ private void OnStatusDataChanged(object sender, StatusDataEventArgs e)
    Console.WriteLine(e.StatusData.Play); 
 }
 ```
+##Visual Studio Community 2017
 ![alt text](https://user-images.githubusercontent.com/4082369/27515695-c8b4d6ce-59a9-11e7-8c2b-0de8209e46eb.PNG "Sony9Pin.Net in Visual Studio 2017")
 
 ## Communication Format
