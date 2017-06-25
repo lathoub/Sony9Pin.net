@@ -40,7 +40,7 @@ private void OnStatusDataChanged(object sender, StatusDataEventArgs e)
    Console.WriteLine(e.StatusData.Play); 
 }
 ```
-##Visual Studio Community 2017
+## Visual Studio Community 2017
 ![alt text](https://user-images.githubusercontent.com/4082369/27515695-c8b4d6ce-59a9-11e7-8c2b-0de8209e46eb.PNG "Sony9Pin.Net in Visual Studio 2017")
 
 ## Communication Format
