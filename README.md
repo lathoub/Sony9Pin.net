@@ -7,3 +7,4 @@ A .Net (C#) library to control a video recorder using the Sony 9-Pin protocol. T
 * Odetics Slave (requires additional programming)
 ## Configuration
 ## Hardware
+### RS-422 SMPTE card
