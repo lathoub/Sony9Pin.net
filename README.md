@@ -50,3 +50,7 @@ The master should not send another command until receiving a response from the s
 | 7 | Receive B       | Transmit B |
 | 8 | Transmit A      |   Receive A |
 | 9 | Ground          |    Ground |
+
+## Hardware
+### RS-422 Adapters
+http://softio.com/pcie_pci_express_2014
