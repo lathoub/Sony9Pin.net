@@ -1,10 +1,8 @@
 # Sony9Pin.net [![Build Status](https://travis-ci.org/lathoub/Sony9Pin.net.svg?branch=master)](https://travis-ci.org/lathoub/Sony9Pin.net) [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-sa/4.0/) 
 A .Net (C#) library to control a video recorder using the Sony 9-Pin protocol. The Odetics protocol is a superset of the Sony 9pin protocol. 
 
-Developed using Visual Studio Community 2017, Version 15.2 (26430.14) release. .Net Framework 4.6.1
-Developed using Visual Studio Community 2022, Version 17.4.2 release. .NET 6.0 LTR
-
-
+* Developed using Visual Studio Community 2017, Version 15.2 (26430.14) release. .Net Framework 4.6.1
+* Developed using Visual Studio Community 2022, Version 17.4.2 release. .NET 6.0 LTR
 
 The Odetics extension of the Sony9Pin protocol is also included in this repo.  It is a superset of the popular Sony 9-Pin VTR control protocol. Most of the added functionnalities are about “Clip” management by which the user can enqueue “Load Clip”/“Load Next Clip” commands.
 
@@ -29,6 +27,13 @@ master.Command(new Play());
 //...
 master.Close();
 ```
+
+#### Discovering slave devices:
+
+```csharp
+var slaves = Sony9PinSlave.Discover();
+```
+
 #### Listening to events
 ```csharp
 master.TimeDataChanged += OnTimeDataChanged;
