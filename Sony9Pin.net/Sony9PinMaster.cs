@@ -214,7 +214,7 @@ namespace Sony9Pin.net
             base.Close();
 
             // Let the this._QueueReaderWorker know its time to finish
-            // Doesn't matter is the tread is busy or not (ég is Open was not successfull, the
+            // Doesn't matter is the tread is busy or not (ég is Open was not successful, the
             // QueueReaderWorker is not started and  IsBusy will be false)
             if (_queueReaderWorker is { WorkerSupportsCancellation: true })
             {

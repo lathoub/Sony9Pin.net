@@ -220,7 +220,7 @@ namespace Sony9Pin.net
         /// <returns>
         ///     The <see cref="CommandBlock" />.
         /// </returns>
-        protected virtual CommandBlock? DeviceTypeRequest()
+        protected virtual CommandBlock DeviceTypeRequest()
         {
             Debug.Assert(null != DeviceType, "DeviceType is null");
 
@@ -623,7 +623,7 @@ namespace Sony9Pin.net
 
                 try
                 {
-                    bvw75.DeviceType += (o, args) => DiscoveryWaitHandle.Set();
+                    bvw75.DeviceType += (o, _) => DiscoveryWaitHandle.Set();
                     if (DiscoveryWaitHandle.WaitOne(500))
                         activePorts.Add(serialPort);
                 }

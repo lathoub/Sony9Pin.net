@@ -34,12 +34,12 @@ namespace Sony9Pin.net
         /// <summary>
         /// 
         /// </summary>
-        public const long TicksPerHour = TicksPerMinute * MinutesPerHour;
+        public const long TicksPerHour = TicksPerMinute * minutesPerHour;
 
         /// <summary>
         /// 
         /// </summary>
-        public const long TicksPerMinute = TicksPerSecond * SecondsPerMinute;
+        public const long TicksPerMinute = TicksPerSecond * secondsPerMinute;
 
         /// <summary>
         /// 
@@ -49,17 +49,17 @@ namespace Sony9Pin.net
         /// <summary>
         /// 
         /// </summary>
-        private const int FieldsPerFrame = 2;
+        private const int fieldsPerFrame = 2;
 
         /// <summary>
         /// 
         /// </summary>
-        private const int MinutesPerHour = 60;
+        private const int minutesPerHour = 60;
 
         /// <summary>
         /// 
         /// </summary>
-        private const int SecondsPerMinute = 60;
+        private const int secondsPerMinute = 60;
 
         #endregion
 
@@ -213,7 +213,7 @@ namespace Sony9Pin.net
         /// <summary>
         /// 
         /// </summary>
-        public static long FieldsPerSecond => _framesPerSecond * FieldsPerFrame;
+        public static long FieldsPerSecond => _framesPerSecond * fieldsPerFrame;
 
         /// <summary>
         /// 
@@ -804,7 +804,7 @@ namespace Sony9Pin.net
             var minutes = (((tc[2] >> 4) * 10) + (tc[2] & 0x0F));
             var hours   = (((  htc >> 4) * 10) + (htc   & 0x0F));
 
-            var fields = frames * FieldsPerFrame;
+            var fields = frames * fieldsPerFrame;
 
             SetData(hours, minutes, seconds, fields);
         }
