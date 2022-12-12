@@ -1,9 +1,0 @@
-﻿namespace BVW75
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-        }
-    }
-}
