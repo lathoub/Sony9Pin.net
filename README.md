@@ -2,6 +2,7 @@
 A .Net (C#) library to control a video recorder using the Sony 9-Pin protocol. The Odetics protocol is a superset of the Sony 9pin protocol. 
 
 Developed using Visual Studio Community 2017, Version 15.2 (26430.14) release. .Net Framework 4.6.1
+Developed using Visual Studio Community 2022, Version 17.4.2 release. .NET 6.0 LTR
 
 
 
