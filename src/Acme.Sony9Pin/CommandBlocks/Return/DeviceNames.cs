@@ -98,6 +98,7 @@ namespace Acme.Sony9Pin.CommandBlocks.Return
                                                                            { 0x21E4, "J-H3" },
                                                                            { 0xD910, "EVS XT" },
                                                                            { 0xD810, "EVS XT" },
+                                                                           { 0xF1E0, "HyperDeck" },
                                                                            {
                                                                                0xA000,
                                                                                "DiskPlayer"
