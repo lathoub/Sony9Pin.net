@@ -31,7 +31,7 @@ namespace CueGraphics.Protocol.Sony9Pin
 
             var slaves = Sony9PinSlave.Discover();
 
-            if (slaves.Length <= 0) MessageBox.Show("Could not find slave devices");
+            if (slaves.Count <= 0) MessageBox.Show("Could not find slave devices");
 
             cboPorts.Items.Clear();
             foreach (var slave in slaves)
