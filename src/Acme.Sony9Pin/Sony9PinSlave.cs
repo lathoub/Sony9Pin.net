@@ -613,9 +613,9 @@ namespace Acme.Sony9Pin
         /// 
         /// </summary>
         /// <returns></returns>
-        public static string[] Discover()
+        public static NameValueCollection Discover()
         {
-            var activePorts = new List<string>();
+            var activePorts = new NameValueCollection();
 
             foreach (var serialPort in SerialPort.GetPortNames())
             {
@@ -628,9 +628,14 @@ namespace Acme.Sony9Pin
 
                     try
                     {
-                        bvw75.DeviceType += (o, args) => DiscoveryWaitHandle.Set();
+                        var deviceType = string.Empty;
+                        bvw75.DeviceType += (o, args) =>
+                        {
+                            DiscoveryWaitHandle.Set();
+                            deviceType = args.DeviceName;
+                        };
                         if (DiscoveryWaitHandle.WaitOne(500))
-                            activePorts.Add(serialPort);
+                            activePorts[serialPort] = deviceType;
                     }
                     finally
                     {
@@ -639,7 +644,7 @@ namespace Acme.Sony9Pin
                 }
             }
 
-            return activePorts.ToArray();
+            return activePorts;
         }
 
         /// <summary>
