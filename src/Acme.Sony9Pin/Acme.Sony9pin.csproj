@@ -53,7 +53,7 @@
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
     <DocumentationFile>bin\Release\Acme.Sony9Pin.xml</DocumentationFile>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <PackageId>Sony9Pin.lathoub</PackageId>
     <PackageVersion>0.8.0</PackageVersion>
     <Authors>lathoub</Authors>
