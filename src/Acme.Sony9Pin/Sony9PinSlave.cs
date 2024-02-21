@@ -18,6 +18,7 @@ namespace Acme.Sony9Pin
 {
     using System;
     using System.Collections.Generic;
+    using System.Collections.Specialized;
     using System.Diagnostics;
     using System.IO.Ports;
     using System.Threading;
